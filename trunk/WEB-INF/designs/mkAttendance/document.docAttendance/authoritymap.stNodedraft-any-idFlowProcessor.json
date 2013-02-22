@@ -1,0 +1,26 @@
+{
+	"f_state":"stNodedraft",
+	"f_authorities":
+	{
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_USER_NAME":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_RELATE_USERS":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_RELATE_USERS_":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_TYPE":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_NO":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_START_TIME":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_END_TIME":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_TITLE":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_NOTE":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"stNodedraft-any-idFlowProcessor",
+	"f_caption":"stNodedraft-any-idFlowProcessor",
+	"f_key":"stNodedraft-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkAttendance.docAttendance"
+	}
+}

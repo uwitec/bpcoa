@@ -1,0 +1,37 @@
+{
+	"f_state":"stDraft",
+	"f_authorities":
+	{
+		"mkOfficeUse.docOfficeUseBill.pOfficeUseBill":"0100",
+		"mkOfficeUse.docOfficeUseBill.pDetail":"0100",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.ID":"1000",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_TYPE":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_NO":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_RECORD_TIME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_USER_NAME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_DEPT_NAME":"1000",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_DEPT_ID":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_NOTE":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_STATE":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_CREATOR_NAME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_CREATOR_DEPT":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_CREATE_TIME":"0010",
+		"mkOfficeUse.docOfficeUseBill.pDetail.btnAdd":"0100",
+		"mkOfficeUse.docOfficeUseBill.pDetail.btnDelete":"0100",
+		"mkOfficeUse.docOfficeUseBill.pDetail.btnMoveUp":"0100",
+		"mkOfficeUse.docOfficeUseBill.pDetail.btnMoveDown":"0100",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL_DETAIL.F_NAME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL_DETAIL.F_NUMBER":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stDraft-any-any",
+	"f_caption":"stDraft-any-any",
+	"f_key":"stDraft-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkOfficeUse.docOfficeUseBill"
+	}
+}

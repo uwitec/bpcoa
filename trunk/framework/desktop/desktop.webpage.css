@@ -1,0 +1,63 @@
+/*
+ * Ext JS Library 2.0
+ * Copyright(c) 2006-2007, Ext JS, LLC.
+ * licensing@extjs.com
+ * 
+ * http://www.extjs.com/license
+ */
+
+html, body {
+	font: normal 12px tahoma, arial, verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	overflow: hidden;
+	height: 100%;
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+.wait-cursor {
+  cursor: wait;
+}
+
+.transparent {
+	-moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+.wallpaper-tile {
+	background-repeat: repeat;
+	background-position: left top;
+}
+.wallpaper-center {
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Begin: shortcuts */
+.ux-shortcut-item {
+	font:normal 10px tahoma,arial,verdana,sans-serif;
+	height:74px;
+	overflow:hidden;
+	position:absolute;
+	text-align:center;
+	width:64px;
+}
+.ux-shortcut-btn {
+	cursor:pointer;
+	background-repeat:no-repeat;
+    width:64px;
+}
+.ux-shortcut-btn-text {
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    cursor:pointer;
+}
+.ux-shortcut-btn-img {
+	width:64px !important;
+    height:48px !important;
+	background-repeat:no-repeat;
+    background-position:center center;
+}

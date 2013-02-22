@@ -1,0 +1,18 @@
+{
+	"f_state":"stNodeEnd",
+	"f_authorities":
+	{
+		"mkWorkRequest.docWorkRequest.pContent":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stNodeEnd-any-any",
+	"f_caption":"stNodeEnd-any-any",
+	"f_key":"stNodeEnd-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkRequest.docWorkRequest"
+	}
+}

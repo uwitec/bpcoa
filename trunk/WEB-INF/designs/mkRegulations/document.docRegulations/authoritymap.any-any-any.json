@@ -1,0 +1,29 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkRegulations.docRegulations.pRegulateInfo":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.ID":"1000",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_TITLE":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_STATE":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_VERSION":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_ISSUE_DATE":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_TYPE":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_ISSUE_DEPT":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_ISSUE_USER":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_NOTE":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_FILE":"0100",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_SEND_MSG":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"any-any-any",
+	"f_caption":"any-any-any",
+	"f_key":"any-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkRegulations.docRegulations"
+	}
+}

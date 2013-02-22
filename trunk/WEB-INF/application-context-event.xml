@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- Event Handler Register -->
+	<bean id="mixky-event-manager" class="com.mixky.engine.event.EventManager">
+		<property name="documentEventHandlersMap">
+			<map>
+				<!--<entry key="mkRegulations.docRegulations">
+					<list>
+						<ref bean="RegulationsDocumentEventHandler"/>
+					</list>
+				</entry>
+				-->
+				<entry key="mkFinance.docFinanceBeleg">
+					<list>
+						<ref bean="FinanceBelegeDocumentEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkAttendance.docAttendance">
+					<list>
+						<ref bean="AttendanceDocumentEventHandler"/>
+					</list>
+				</entry>
+				<!--<entry key="mkWorkReport.dtWorkReport">
+					<list>
+						<ref bean="WorkReportDocumentEventHandler"/>
+					</list>
+				</entry>
+				-->
+				<entry key="mkOfficeUse.docOfficeUseBill">
+					<list>
+						<ref bean="OfficeUseBillDocumentEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkOfficeUse.docOfficeUseBillIn">
+					<list>
+						<ref bean="OfficeUseBillDocumentEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkWorklog.docWorklog">
+					<list>
+						<ref bean="WorklogDocumentEventHandler"/>
+					</list>
+				</entry>
+			</map>
+		</property>
+		<property name="formEventHandlersMap">
+			<map>
+				<entry key="mkForum.T_MK_APP_FORUM_SUBJECT.frmSubject">
+					<list>
+						<ref bean="ForumSubjectFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkForum.T_MK_APP_FORUM_SUBJECT.frmReSubject">
+					<list>
+						<ref bean="ForumSubjectFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkWorkRequest.T_MK_APP_WORKREQUEST.frmWorkRequest">
+					<list>
+						<ref bean="WorkRequestFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkNotify.T_MK_APP_NOTIFY.notifyform">
+					<list>
+						<ref bean="NotifyFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkKnowledge.T_MK_APP_KNOWLEDGE.frmKowledge">
+					<list>
+						<ref bean="KnowledgeFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkKnowledge.T_MK_APP_KNOWLEDGE_COMMENT.frmComment">
+					<list>
+						<ref bean="KnowledgeCommentEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkRegulations.T_MK_APP_REGULATIONS.tRegulateForm">
+					<list>
+						<ref bean="RegulationsFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkFinance.T_MK_APP_FINANCE_BELEG.frmFinanceBelegMain">
+					<list>
+						<ref bean="FinanceBelegeFormEventHandler"/>
+					</list>
+				</entry>		
+				<entry key="mkWorklog.T_MK_APP_WORKLOG.frmWorklog">
+					<list>
+						<ref bean="WorklogFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkAttendance.T_MK_APP_ATTENDANCE.frmAttendance">
+					<list>
+						<ref bean="AttendanceFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkAddressBook.T_MK_SYS_DICTIONARY_DATA.addressbookform">
+					<list>
+						<ref bean="DictionaryDataRefresh"/>
+					</list>
+				</entry>	
+				<entry key="mkWorkReport.T_MK_APP_WORKREPORT.frmWorkReport">
+					<list>
+						<ref bean="WorkReportFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkWorkReport.T_MK_APP_WORKREPORT_COMMENT.frmComment">
+					<list>
+						<ref bean="WorkReportCommentFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkOfficeUse.T_MK_APP_OFFICEUSE_BILL_DETAIL.frmDetail">
+					<list>
+						<ref bean="OfficeUseBillDetailFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkMail.T_MK_APP_MAIL_ACCOUNT.frmAccount">
+					<list>
+						<ref bean="MailAccountFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkFileSender.T_MK_APP_FILESENDER.frmFileSender">
+					<list>
+						<ref bean="FileSenderFormEventHandler"/>
+					</list>
+				</entry>		
+				<entry key="bpcProject.T_BPCOA_PROJECT.frmProject">
+					<list>
+						<ref bean="BpcProjectFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="bpcProject.T_BPCOA_PROJECT_TASK.frmAdd">
+					<list>
+						<ref bean="BpcProjectTaskAddFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="bpcProject.T_BPCOA_PROJECT_TASK.frmEditor">
+					<list>
+						<ref bean="BpcProjectTaskEditFormEventHandler"/>
+					</list>
+				</entry>
+				<entry key="bpcProject.T_BPCOA_PROJECT_TASK.frmSample">
+					<list>
+						<ref bean="BpcProjectTaskSampleFormEventHandler"/>
+					</list>
+				</entry>			
+			</map>
+		</property>
+		<property name="flowEventHandlersMap">
+			<map>
+				<entry key="mkAttendance.flowAttendance">
+					<list>
+						<ref bean="AttendanceFlowEventHandler"/>
+					</list>
+				</entry>
+				<entry key="mkWorkRequest.flowWorkRequest">
+					<list>
+						<ref bean="WorkRequestFlowEventHandler"/>
+					</list>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="DictionaryDataRefresh" class="com.mixky.engine.dictionary.event.DictionaryDataCacheRefreshHandler"/>
+	
+	<bean id="ForumSubjectFormEventHandler" class="com.mixky.app.mkoa.forum.event.ForumSubjectFormEventHandler"/>
+	<bean id="WorkRequestFormEventHandler" class="com.mixky.app.mkoa.workrequest.event.WorkRequestFormEventHandler"/>
+	<bean id="WorkRequestFlowEventHandler" class="com.mixky.app.mkoa.workrequest.event.WorkRequestFlowEventHandler"/>
+	
+	
+	<bean id="RegulationsFormEventHandler" class="com.mixky.app.mkoa.regulations.event.RegulationFormEventHandler"/>
+	<bean id="RegulationsDocumentEventHandler" class="com.mixky.app.mkoa.gzzd.event.RegulationsDocumentEventHandler"/>
+	
+	<bean id="NotifyFormEventHandler" class="com.mixky.app.mkoa.notify.event.NotifyFormEventHandler"/>
+	
+	<bean id="KnowledgeFormEventHandler" class="com.mixky.app.mkoa.knowledge.event.KnowledgeFormEventHandler"/>
+	<bean id="KnowledgeCommentEventHandler" class="com.mixky.app.mkoa.knowledge.event.KnowledgeCommentEventHandler"/>
+	
+	<bean id="FinanceBelegeDocumentEventHandler" class="com.mixky.app.mkoa.finance.event.BelegeDocumentEventHandler"/>
+	<bean id="FinanceBelegeFormEventHandler" class="com.mixky.app.mkoa.finance.event.BelegeFormEventHandler"/>
+		
+	<bean id="AttendanceDocumentEventHandler" class="com.mixky.app.mkoa.attendance.event.AttendanceDocumentEventHandler"/>
+	<bean id="AttendanceFlowEventHandler" class="com.mixky.app.mkoa.attendance.event.AttendanceFlowEventHandler"/>
+	<bean id="AttendanceFormEventHandler" class="com.mixky.app.mkoa.attendance.event.AttendanceFormEventHandler"/>
+	
+	<bean id="WorklogFormEventHandler" class="com.mixky.app.mkoa.worklog.event.WorklogFormEventHandler"/>
+	<bean id="WorklogDocumentEventHandler" class="com.mixky.app.mkoa.worklog.event.WorklogDocumentEventHandler"/>
+	
+	<bean id="WorkReportFormEventHandler" class="com.mixky.app.mkoa.workreport.event.WorkReportFormEventHandler"/>
+	<bean id="WorkReportDocumentEventHandler" class="com.mixky.app.mkoa.workreport.event.WorkReportDocumentEventHandler"/>
+	<bean id="WorkReportCommentFormEventHandler" class="com.mixky.app.mkoa.workreport.event.WorkReportCommentFormEventHandler"/>
+	
+	<bean id="OfficeUseBillDocumentEventHandler" class="com.mixky.app.mkoa.officeuse.event.OfficeUseBillDocumentEventHandler"/>
+	<bean id="OfficeUseBillDetailFormEventHandler" class="com.mixky.app.mkoa.officeuse.event.OfficeUseBillDetailFormEventHandler"/>
+	
+	<bean id="MailAccountFormEventHandler" class="com.mixky.app.mkoa.mail.event.MailAccountFormEventHandler"/>	
+	<bean id="FileSenderFormEventHandler" class="com.mixky.app.mkoa.filesender.event.FileSenderFormEvent"/>
+	
+	<bean id="BpcProjectFormEventHandler" class="com.mixky.app.bpcoa.project.event.ProjectFormEventHandler"/>
+	<bean id="BpcProjectTaskAddFormEventHandler" class="com.mixky.app.bpcoa.project.event.ProjectTaskAddFormEventHandler"/>
+	<bean id="BpcProjectTaskEditFormEventHandler" class="com.mixky.app.bpcoa.project.event.ProjectTaskEditFormEventHandler"/>
+	<bean id="BpcProjectTaskSampleFormEventHandler" class="com.mixky.app.bpcoa.project.event.ProjectTaskSampleFormEventHandler"/>
+
+</beans>

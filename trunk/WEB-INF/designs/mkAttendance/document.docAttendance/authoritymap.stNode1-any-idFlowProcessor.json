@@ -1,0 +1,19 @@
+{
+	"f_state":"stNode1",
+	"f_authorities":
+	{
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_MANAGER_OPINION":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_RESULT":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"stNode1-any-idFlowProcessor",
+	"f_caption":"stNode1-any-idFlowProcessor",
+	"f_key":"stNode1-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkAttendance.docAttendance"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"f_state":"stCreate",
+	"f_authorities":
+	{
+		"mkWorkReport.docWorkReport.btnSave":"0100",
+		"mkWorkReport.docWorkReport.btnConfirm":"0100",
+		"mkWorkReport.docWorkReport.btnIssue":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stCreate-any-any",
+	"f_caption":"stCreate-any-any",
+	"f_key":"stCreate-any-any",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkReport.docWorkReport"
+	},
+	"f_class":"authoritymap"
+}

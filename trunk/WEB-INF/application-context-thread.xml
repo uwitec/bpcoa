@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- thread Register -->
+	<!-- Event Handler Register -->
+	<bean id="mixky-thread-manager" class="com.mixky.system.MixkyThreadManager">
+		<property name="threads">
+			<list>
+				<ref bean="thread-fetchmail"/>
+				<!-- <ref bean="thread-sendmail"/>
+				<ref bean="thread-dispatchmail"/> -->
+				<ref bean="thread-deletetmpfile"/>
+				<ref bean="thread-dailytask"/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="thread-fetchmail" class="com.mixky.app.mkoa.mail.thread.FetchMailThread">
+		<property name="intervalMinutes">
+			<value>5</value>
+		</property>
+		<property name="withFixedDelay">
+			<value>false</value>
+		</property>
+	</bean>
+	
+	<bean id="thread-sendmail" class="com.mixky.app.mkoa.mail.thread.BulkSendMailThread">
+		<property name="intervalMinutes">
+			<value>5</value>
+		</property>
+		<property name="withFixedDelay">
+			<value>true</value>
+		</property>
+	</bean>
+	
+	<!-- <bean id="thread-dispatchmail" class="com.mixky.app.mkoa.mail.thread.DispatchMailThread">
+		<property name="intervalMinutes">
+			<value>5</value>
+		</property>
+		<property name="withFixedDelay">
+			<value>true</value>
+		</property>
+	</bean> -->
+	
+	<bean id="thread-deletetmpfile" class="com.mixky.app.mkoa.mail.thread.DeleteTempFilesThread">
+		<property name="intervalMinutes">
+			<value>60</value>
+		</property>
+		<property name="withFixedDelay">
+			<value>true</value>
+		</property>
+		<property name="fileIntervalDays">
+			<value>1</value>
+		</property>
+		<property name="tmpFileDirs">
+			<list>
+				<value>WEB-INF/mailtmp</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="thread-dailytask" class="com.mixky.app.bpcoa.project.thread.DailyTaskThread">
+		<property name="intervalMinutes">
+			<value>60</value>
+		</property>
+		<property name="withFixedDelay">
+			<value>false</value>
+		</property>
+	</bean>
+	
+</beans>

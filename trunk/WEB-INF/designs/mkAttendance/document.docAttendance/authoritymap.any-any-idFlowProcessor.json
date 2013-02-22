@@ -1,0 +1,23 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkAttendance.docAttendance.btnSave":"0100",
+		"mkAttendance.docAttendance.btnConfirm":"0100",
+		"mkAttendance.docAttendance.pAttendanceInfo":"0100",
+		"mkAttendance.docAttendance.pFlowView":"0100",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_STATE":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_UPDATE_TIME":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"any-any-idFlowProcessor",
+	"f_caption":"any-any-idFlowProcessor",
+	"f_key":"any-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkAttendance.docAttendance"
+	}
+}

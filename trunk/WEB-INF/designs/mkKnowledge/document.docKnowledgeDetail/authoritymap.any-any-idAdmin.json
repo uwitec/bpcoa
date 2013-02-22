@@ -1,0 +1,31 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkKnowledge.docKnowledgeDetail.btnSave":"0100",
+		"mkKnowledge.docKnowledgeDetail.btnConfirm":"0100",
+		"mkKnowledge.docKnowledgeDetail.btnDelete":"0100",
+		"mkKnowledge.docKnowledgeDetail.pDetail":"0100",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.ID":"1000",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_CREATOR_ID":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_CREATOR_NAME":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_CREATED":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_UPDATED":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_TITLE":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_TAG":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_FILE":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_CONTENT":"0010",
+		"mkKnowledge.T_MK_APP_KNOWLEDGE.F_TAG_ID":"0010"
+	},
+	"f_identity":"idAdmin",
+	"f_substate":"any",
+	"f_name":"any-any-idAdmin",
+	"f_caption":"any-any-idAdmin",
+	"f_key":"any-any-idAdmin",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkKnowledge.docKnowledgeDetail"
+	}
+}

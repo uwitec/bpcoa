@@ -1,0 +1,16 @@
+{
+	"f_i_table":
+	{
+		"classpath":"table",
+		"data":"mkTask.T_MK_APP_TASK"
+	},
+	"f_name":"docTaskManage",
+	"f_caption":"docTaskManage",
+	"f_key":"docTaskManage",
+	"f_class":"document",
+	"f_i_parent":
+	{
+		"classpath":"module",
+		"data":"mkTask"
+	}
+}

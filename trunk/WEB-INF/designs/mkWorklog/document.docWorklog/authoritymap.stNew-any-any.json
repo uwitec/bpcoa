@@ -1,0 +1,33 @@
+{
+	"f_state":"stNew",
+	"f_authorities":
+	{
+		"mkWorklog.docWorklog.btnSave":"0010",
+		"mkWorklog.docWorklog.btnConfirm":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_USER":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_STATE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_START_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_END_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_WORK_TYPE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_WORKLOAD":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_TITLE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_NOTE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CLIENT_NO":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_PROJECT_NO":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CREATOR_NAME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_UPDATE_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CREATE_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_USER_ID":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stNew-any-any",
+	"f_caption":"stNew-any-any",
+	"f_key":"stNew-any-any",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorklog.docWorklog"
+	},
+	"f_class":"authoritymap"
+}

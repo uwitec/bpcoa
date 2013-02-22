@@ -1,0 +1,33 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkWorklog.docWorklog.pWorklog":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.ID":"1000",
+		"mkWorklog.T_MK_APP_WORKLOG.F_USER":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_STATE":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_START_TIME":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_END_TIME":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_WORK_TYPE":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_WORKLOAD":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_TITLE":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_NOTE":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CLIENT_NO":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_PROJECT_NO":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CREATOR_NAME":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_UPDATE_TIME":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CREATE_TIME":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_USER_ID":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"any-any-any",
+	"f_caption":"any-any-any",
+	"f_key":"any-any-any",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorklog.docWorklog"
+	},
+	"f_class":"authoritymap"
+}

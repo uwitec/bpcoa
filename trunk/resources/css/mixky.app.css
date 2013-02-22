@@ -1,0 +1,519 @@
+
+
+#loading{
+	position:absolute;
+	left:45%;
+	top:40%;
+	border:1px solid #6593cf;
+	padding:2px;
+	background:#c3daf9;
+	width:150px;
+	text-align:center;
+	z-index:13999;
+}
+#loading .loading-indicator{
+	margin:0;
+	border:1px solid #a3bad9;
+	background:white;
+	color:#003366;
+	font:bold 13px tahoma,arial,helvetica;
+	padding:10px;
+    background-image:url('../images/app/loading.gif');
+    background-repeat: no-repeat;
+    background-position:6 10;
+}
+
+#loading-mask{
+	width:100%;height:100%;background:#c3daf9;position:absolute;z-index:13998;left:0;top:0;
+}
+
+
+.x-icon-alert {
+	background-image: url(../images/app/caution.gif) !important;
+}
+.x-icon-information {
+	background-image: url(../images/app/quote.gif) !important;
+}
+.x-icon-waiting {
+	background-image: url(../images/app/hourglass.gif) !important;
+}
+.x-icon-done {
+	background-image: url(../images/app/clock.gif) !important;
+}
+.x-icon-error {
+	background-image: url(../images/app/exclamation.gif) !important;
+}
+
+.x-field-percent {
+	background:#ffffff url(../images/app/percent.gif) no-repeat right center;
+}
+
+/* Desktop preferences css begin*/
+
+.x-view-selected {
+	background: #c3daf9 none;
+}
+
+.x-view-over {
+	background: #f1f1f1 none;
+}
+
+.pref-view-thumb-wrap {
+	float: left;
+	margin: 4px;
+	margin-right: 0;
+	padding: 8px;
+}
+
+.pref-view-thumb-wrap span {
+	display: block;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+}
+
+#x-webpage-header
+{
+	border:0 none;
+	background:#1E4176 url(../images/hd-bg.gif) repeat-x 0 0;
+	padding-top:2px;
+	padding-left:10px;
+	padding-bottom:2px;
+    font:bold 16px tahoma, arial, 宋体, sans-serif;
+    color:white;
+    height:32px;
+}
+
+/* Desktop preferences css end*/
+
+
+.mixky-grid-row-changed{
+	background-color:lightyellow;
+}
+
+/*grid cell select css*/
+.x-selectable, .x-selectable * {
+	-moz-user-select: text!important;
+	-khtml-user-select: text!important;
+}
+
+/*grid cell line break*/
+.x-grid3-cell-text-visible .x-grid3-cell-inner{
+	overflow:visible;
+	padding:3px 3px 3px 5px;
+	white-space:normal;
+} 
+
+
+.mixky-grid-row-changed{
+	background-color:lightyellow !importent;
+}
+
+.mixky-sys-handsign{
+	width: 60px;
+	height: 24px;
+}
+
+.mixky-favorite-off{
+	padding-top:2px;
+	background-image:url(../images/icon/sys/favoriteoff.png) !important;
+}
+.mixky-favorite-on{
+	padding-top:2px;
+	background-image:url(../images/icon/sys/favoriteon.png) !important;
+}
+
+/*forum topic css*/
+
+.post-date {
+    font-weight:bold;
+    color:#333;
+}
+
+.forum_author {
+    color:#333;
+}
+
+.x-forum-thread-detail {
+    padding:5px;    
+}
+.x-forum-thread-inner {
+    border:1px solid gray;
+    background:rgb(221,232,244);
+}
+.x-forum-thread-header {
+    height:21px;
+    background:transparent url(../image/light-hd.gif) !important;
+    line-height:21px;    
+}
+.x-forum-thread-header-info {
+    font-size:12px;
+    color:gray;
+}
+.x-forum-thread-header-tool {
+    text-align:right;
+}
+.x-forum-thread-body {
+    padding:0px 2px 2px 2px;
+}
+.x-forum-thread-body-inner {
+    background:white;
+    border:1px solid silver;
+}
+.x-forum-thread-author {
+    padding-left:10px;
+    border-bottom:1px solid silver;
+    height:40px;
+    line-height:40px;
+    background:rgb(251,254,218);
+}
+.x-knowledge-thread-title {
+	padding-top: 6px;
+    padding-left:10px;
+    background:rgb(251,254,218);
+    font-size:20px;
+    color:rgb(23,92,158);
+}
+.x-knowledge-thread-tag {
+    padding-left:10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-bottom:1px solid silver;
+    background:rgb(251,254,218);
+    font-size:12px;
+}
+.x-knowledge-thread-value {
+	padding-top: 10px;
+	padding-bottom: -2px;
+    padding-left:10px;
+    font-size:16px;
+}
+.x-knowledge-thread-button-submit {
+	padding-top: 2px;
+    padding-left:10px;
+}
+.x-forum-thread-author b, .x-forum-thread-topic-link {
+    font-size:14px;
+    color:rgb(23,92,158);
+}
+.x-forum-thread-subject {    
+    padding:5px 20px 5px 20px;
+    height:30px;
+    line-height:30px;
+}
+.x-forum-thread-subject b{
+    font-size:16px;
+}
+.x-forum-thread-subject-inner {
+    border-bottom:1px solid gray;
+}
+.x-forum-thread-desc {
+    padding:10px;  
+    font-size:12px;  
+}
+.x-forum-thread-attach {
+    padding:10px 10px 5px 20px;
+}
+.x-forum-thread-attach-link {
+    font-size:12px;
+    color:gray;
+}
+.x-forum-thread-footer {
+    padding:5px;
+    height:25px;
+    text-align:right;
+}
+
+.x-forum-home-tborder
+{
+	background: #ffffff;
+	color: #000000;
+	border: 1px solid #dadada;
+}
+.x-forum-home-tcat
+{
+	background: #ddd url(../images/app/forum/item-hd.gif) repeat-x 0 bottom;
+	color: #222;
+	font-size: 12px;
+	font-weight:bold;
+	padding:6px;
+}
+.x-forum-thumb-wrap {
+    float: left;
+    margin: 4px 0 4px 4px;
+    padding: 1px;
+    display:block;
+	overflow:hidden;
+	text-align:center;
+}
+.x-forum-thumb {
+    -moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#DDDDDD none repeat scroll 0 0;
+	padding:3px;
+}
+
+.x-forum-home-thead
+{
+	padding: 4px; 
+	background: #f9f9f9 url(../images/app/forum/item-hd4.gif) repeat-x 0 bottom;
+	color: #444;
+	font-size: 11px;
+	border-bottom:1px solid #dadada;
+}
+.x-forum-home-thead a:link, .thead_alink
+{
+	color: #444;
+}
+.x-forum-home-thead a:visited, .thead_avisited
+{
+	color: #444;
+}
+.x-forum-home-thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #444;
+}
+.x-forum-home-alt1, .x-forum-home-alt1Active
+{
+	background: #ffffff;
+	color: #000000;
+}
+.x-forum-home-alt2, .x-forum-home-alt2Active
+{
+	background: #ffffff;
+	color: #000000;
+}
+.x-forum-home-smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+a:link
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+a:visited
+{
+	color: #175c9e;
+	text-decoration: none;
+}
+a:hover, a:active
+{
+	color: #385F95;
+	text-decoration: underline;
+}
+
+td.x-forum-home-alt1,td.x-forum-home-alt1Active,td.x-forum-home-alt2 {
+   border-left:1px solid #dddddd;
+   border-bottom:1px solid #dddddd;
+padding:8px;
+}
+td.x-forum-home-alt1 table td,td.x-forum-home-alt1Active table td,td.x-forum-home-alt2 table td {
+   padding : 0;
+}
+
+.mixky-attendance-cell{
+	padding : 0 !importent;
+}
+
+.mixky-attendance-otherday-cell{
+	background: #EDEDED;
+}
+
+.mixky-attendance-workday-cell{
+	background: lightyellow;
+}
+
+.mixky-attendance-restday-cell{
+	background: #EDEDED;
+}
+
+.mixky-attendance-today-cell{
+	background: #B8CFEE;
+}
+
+.mixky-attendance-detail{
+	padding-left:3px;
+	padding-top:1px;
+	background:transparent;
+}
+
+a.mixky-link-exception:link, a.mixky-link-exception:visited{
+	color: red;
+	text-decoration: none;
+}
+a.mixky-link-exception:hover, a.mixky-link-exception:active{
+	color: red;
+	text-decoration: underline;
+}
+
+a.mixky-link-normal:link, a.mixky-link-normal:visited{
+	color: blue;
+	text-decoration: none;
+}
+a.mixky-link-normal:hover, a.mixky-link-normal:active{
+	color: blue;
+	text-decoration: underline;
+}
+
+a.mixky-link-excellent:link, a.mixky-link-excellent:visited{
+	color: darkgreen;
+	text-decoration: none;
+}
+a.mixky-link-excellent:hover, a.mixky-link-excellent:active{
+	color: darkgreen;
+	text-decoration: underline;
+}
+
+a.mixky-link-done:link, a.mixky-link-done:visited{
+	color: gray;
+	text-decoration: none;
+}
+a.mixky-link-done:hover, a.mixky-link-done:active{
+	color: gray;
+	text-decoration: underline;
+}
+
+a.mixky-link-doing:link, a.mixky-link-doing:visited{
+	color: darkgreen;
+	text-decoration: none;
+}
+a.mixky-link-doing:hover, a.mixky-link-doing:active{
+	color: darkgreen;
+	text-decoration: underline;
+}
+
+a.mixky-link-plan:link, a.mixky-link-plan:visited{
+	color: black;
+	text-decoration: none;
+}
+a.mixky-link-plan:hover, a.mixky-link-plan:active{
+	color: black;
+	text-decoration: underline;
+}
+
+.mixky-ignore a:link{
+	color: gray;
+	text-decoration: none;
+}
+.mixky-ignore a:visited{
+	color: gray;
+	text-decoration: none;
+}
+.mixky-ignore a:hover, a:active{
+	color: gray;
+	text-decoration: underline;
+}
+.mixky-card{
+	margin: 10px;
+	padding: 10px;
+}
+
+.mixky-card-title{
+	text-align: center;
+	padding-bottom: 8px;
+}
+
+.mixky-card-name {
+	font-size:36px;	
+	font-weight:bold;
+}
+.mixky-card-duty {
+	font-size:18px;
+	font-weight:normal;
+}
+
+.mixky-card-unit {
+	font-size:18px;
+	font-weight:400;
+}
+.mixky-card-other {
+	font-size:12px;
+}
+
+.mixky-mail-readed {
+	background-color : lightyellow !important;
+	font-weight:bold;
+}
+
+a.mixky-link-normal-01:link, a.mixky-link-normal-01:visited{
+	color: #66AA00;
+	text-decoration: none;
+}
+a.mixky-link-normal-01:hover, a.mixky-link-normal-01:active{
+	color: blue;
+	text-decoration: underline;
+}
+a.mixky-link-normal-02:link, a.mixky-link-normal-02:visited{
+	color: #3366CC;
+	text-decoration: none;
+}
+a.mixky-link-normal-02:hover, a.mixky-link-normal-02:active{
+	color: blue;
+	text-decoration: underline;
+}
+a.mixky-link-normal-03:link, a.mixky-link-normal-03:visited{
+	color: #DD4477;
+	text-decoration: none;
+}
+a.mixky-link-normal-03:hover, a.mixky-link-normal-03:active{
+	color: blue;
+	text-decoration: underline;
+}
+a.mixky-link-normal-04:link, a.mixky-link-normal-04:visited{
+	color: #676767;
+	text-decoration: none;
+}
+a.mixky-link-normal-04:hover, a.mixky-link-normal-04:active{
+	color: blue;
+	text-decoration: underline;
+}
+a.mixky-link-normal-05:link, a.mixky-link-normal-05:visited{
+	color: #DD4477;
+	text-decoration: none;
+}
+a.mixky-link-normal-05:hover, a.mixky-link-normal-05:active{
+	color: blue;
+	text-decoration: underline;
+}
+a.mixky-link-normal-06:link, a.mixky-link-normal-06:visited{
+	color: #AAAA11;
+	text-decoration: none;
+}
+a.mixky-link-normal-06:hover, a.mixky-link-normal-06:active{
+	color: blue;
+	text-decoration: underline;
+}
+a.mixky-link-normal-07:link, a.mixky-link-normal-07:visited{
+	color: #C887DC;
+	text-decoration: none;
+}
+a.mixky-link-normal-07:hover, a.mixky-link-normal-07:active{
+	color: blue;
+	text-decoration: underline;
+}
+
+.mixky-editor-rownumberer-add{
+	padding-left:9px;
+	background:transparent url(../images/app/rowadded.png) no-repeat;
+}
+
+.mixky-editor-rownumberer-del{
+	padding-left:9px;
+	background:transparent url(../images/app/rowdeleted.png) no-repeat;
+}
+
+.mixky-editor-rownumberer-edit{
+	padding-left:9px;
+	background:transparent url(../images/app/rowchanged.png) no-repeat;
+}
+.mixky-detail-image {
+	border:0;  
+	margin:0;  
+	padding:0; 
+	max-width:650px; 
+	width: expression(this.width > 650 && this.width > this.height ? 650px : 'auto';);  
+	max-height:1650px; 
+	height: expresion(this.height > 1650 ? 1650px : 'auto';); 
+}

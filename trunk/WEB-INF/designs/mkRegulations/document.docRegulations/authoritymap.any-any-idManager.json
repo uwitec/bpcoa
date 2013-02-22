@@ -1,0 +1,32 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkRegulations.docRegulations.btnSave":"0010",
+		"mkRegulations.docRegulations.btnConfirm":"0010",
+		"mkRegulations.docRegulations.pRegulateInfo":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.ID":"1000",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_TITLE":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_STATE":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_VERSION":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_ISSUE_DATE":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_TYPE":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_ISSUE_DEPT":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_ISSUE_USER":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_NOTE":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_FILE":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_SEND_MSG":"0010",
+		"mkRegulations.T_MK_APP_REGULATIONS.F_UPDATE_TIME":"0010"
+	},
+	"f_identity":"idManager",
+	"f_substate":"any",
+	"f_name":"any-any-idManager",
+	"f_caption":"any-any-idManager",
+	"f_key":"any-any-idManager",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkRegulations.docRegulations"
+	}
+}

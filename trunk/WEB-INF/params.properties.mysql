@@ -1,0 +1,7 @@
+# database
+jdbc.dbtype=MYSQL
+jdbc.url=jdbc:mysql://localhost:3306/singingtest?characterEncoding=UTF-8
+jdbc.driverClassName=com.mysql.jdbc.Driver
+jdbc.username=root
+jdbc.password=root
+jdbc.binaryimp=com.garage.xdatabase.binary.LongfileToDBMysqlImp

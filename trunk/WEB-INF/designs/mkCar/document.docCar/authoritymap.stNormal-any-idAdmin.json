@@ -1,0 +1,18 @@
+{
+	"f_state":"stNormal",
+	"f_authorities":
+	{
+		"mkCar.docCar.btnDelete":"0100"
+	},
+	"f_identity":"idAdmin",
+	"f_substate":"any",
+	"f_name":"stNormal-any-idAdmin",
+	"f_caption":"stNormal-any-idAdmin",
+	"f_key":"stNormal-any-idAdmin",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkCar.docCar"
+	}
+}

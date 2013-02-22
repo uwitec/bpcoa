@@ -1,0 +1,26 @@
+{
+	"f_state":"stAudit",
+	"f_authorities":
+	{
+		"mkFinance.docFinanceBeleg.btnSave":"0010",
+		"mkFinance.docFinanceBeleg.btnAudit":"0010",
+		"mkFinance.docFinanceBeleg.btnAuditBack":"0010",
+		"mkFinance.T_MK_APP_FINANCE_BELEG.F_NO":"0010",
+		"mkFinance.T_MK_APP_FINANCE_BELEG.F_NOTE":"0010",
+		"mkFinance.T_MK_APP_FINANCE_BELEG.F_STATE":"0010",
+		"mkFinance.T_MK_APP_FINANCE_BELEG.F_AUDITOR":"0010",
+		"mkFinance.T_MK_APP_FINANCE_BELEG.F_AUDIT_DATE":"0010",
+		"mkFinance.T_MK_APP_FINANCE_BELEG.F_AUDITOR_ID":"0010"
+	},
+	"f_identity":"idAuditor",
+	"f_substate":"any",
+	"f_name":"stAudit-any-idAuditor",
+	"f_caption":"stAudit-any-idAuditor",
+	"f_key":"stAudit-any-idAuditor",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkFinance.docFinanceBeleg"
+	},
+	"f_class":"authoritymap"
+}
