@@ -1,0 +1,18 @@
+{
+	"f_state":"stOver",
+	"f_authorities":
+	{
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_DEPT_NAME":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stOver-any-any",
+	"f_caption":"stOver-any-any",
+	"f_key":"stOver-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkOfficeUse.docOfficeUseBill"
+	}
+}

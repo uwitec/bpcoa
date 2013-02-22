@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans>
+	<bean name="/mkoa/knowledge/knowledge.tag.bind.do" class="com.mixky.app.mkoa.knowledge.action.KnowledgeTagTreeBindAction"/>
+	<bean name="/mkoa/addressBook/addressbook.import.do" class="com.mixky.app.mkoa.addressbook.AddressBookImport"/>
+	<bean name="/mkoa/mail/mailfile.download.do" class="com.mixky.app.mkoa.mail.action.MailFileDownloadAction"/>
+</beans>

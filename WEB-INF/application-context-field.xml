@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- Group Parser Register -->
+	<bean id="mixky-editor_manager" class="com.mixky.engine.store.StoreManager">
+		<property name="customEditors">
+			<map>
+				<entry key="104">
+					<list>
+						<ref bean="EmailAddress"/>
+					</list>
+				</entry>
+				<entry key="105">
+					<list>
+						<ref bean="ComboTree"/>
+					</list>
+				</entry>
+				<entry key="OpinionField">
+					<list>
+						<ref bean="OpinionField"/>
+					</list>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="EmailAddress" class="com.mixky.engine.store.editor.EmailAddress"/>
+	<bean id="ComboTree" class="com.mixky.engine.store.editor.ComboTreeField"/>
+	<bean id="OpinionField" class="com.mixky.engine.store.editor.OpinionField"/>
+</beans>

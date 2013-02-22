@@ -1,0 +1,18 @@
+{
+	"f_state":"stIdle",
+	"f_authorities":
+	{
+		"mkAsset.docAsset.btnDelete":"0100"
+	},
+	"f_identity":"idAdmin",
+	"f_substate":"any",
+	"f_name":"stIdle-any-idAdmin",
+	"f_caption":"stIdle-any-idAdmin",
+	"f_key":"stIdle-any-idAdmin",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkAsset.docAsset"
+	},
+	"f_class":"authoritymap"
+}

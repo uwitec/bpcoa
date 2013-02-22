@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Html Editor</title>
+		<style>
+			form {
+				margin: 0;
+			}
+			textarea {
+				display: block;
+			}
+		</style>
+		<script charset="utf-8" src="kindeditor-min.js"></script>
+		<script charset="utf-8" src="lang/zh_CN.js"></script>
+		<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = KindEditor.create('textarea[name="content"]', {
+					allowFileManager : true
+				});
+			})
+			
+			function setValue(v) {
+				editor.html(v);
+			}
+			
+			function getContent() {
+				return editor.html();
+			}
+			
+		</script>
+	</head>
+	<body>
+		<textarea name="content" style="width:800px;height:400px;visibility:hidden;"></textarea>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+{
+	"f_i_table":
+	{
+		"classpath":"table",
+		"data":"mkScore.T_MK_BPC_SCORE_DAY"
+	},
+	"f_name":"docScoreDay",
+	"f_caption":"每日积分",
+	"f_key":"docScoreDay",
+	"f_class":"document",
+	"f_i_parent":
+	{
+		"classpath":"module",
+		"data":"mkScore"
+	}
+}

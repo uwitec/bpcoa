@@ -1,0 +1,18 @@
+{
+	"f_state":"stNode1",
+	"f_authorities":
+	{
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_OPINION":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"stNode1-any-idFlowProcessor",
+	"f_caption":"stNode1-any-idFlowProcessor",
+	"f_key":"stNode1-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkRequest.docWorkRequest"
+	}
+}

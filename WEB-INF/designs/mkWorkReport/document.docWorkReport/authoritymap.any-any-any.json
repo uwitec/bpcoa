@@ -1,0 +1,33 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkWorkReport.docWorkReport.btnSave":"0100",
+		"mkWorkReport.docWorkReport.btnConfirm":"0100",
+		"mkWorkReport.docWorkReport.btnIssue":"0100",
+		"mkWorkReport.docWorkReport.pWorkReport":"0100",
+		"mkWorkReport.T_MK_APP_WORKREPORT.ID":"1000",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_TITLE":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_SCOPS":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_FILE":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_CONTENT":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_SCOP_IDS":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_STATE":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_CREATOR_ID":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_CREATOR_NAME":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_CREATOR_DEPT":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_UPDATE_TIME":"0010",
+		"mkWorkReport.T_MK_APP_WORKREPORT.F_CREATE_TIME":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"any-any-any",
+	"f_caption":"any-any-any",
+	"f_key":"any-any-any",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkReport.docWorkReport"
+	},
+	"f_class":"authoritymap"
+}

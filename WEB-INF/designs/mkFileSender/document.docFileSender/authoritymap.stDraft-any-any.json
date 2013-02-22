@@ -1,0 +1,20 @@
+{
+	"f_state":"stDraft",
+	"f_authorities":
+	{
+		"mkFileSender.T_MK_APP_FILESENDER.F_NAME":"0010",
+		"mkFileSender.docFileSender.btnSave":"0010",
+		"mkFileSender.docFileSender.btnDelete":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stDraft-any-any",
+	"f_caption":"stDraft-any-any",
+	"f_key":"stDraft-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkFileSender.docFileSender"
+	}
+}

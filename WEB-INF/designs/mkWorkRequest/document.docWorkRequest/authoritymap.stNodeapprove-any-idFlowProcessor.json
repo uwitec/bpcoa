@@ -1,0 +1,19 @@
+{
+	"f_state":"stNodeapprove",
+	"f_authorities":
+	{
+		"mkWorkRequest.docWorkRequest.pContent":"0010",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_OPINION":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"stNodeapprove-any-idFlowProcessor",
+	"f_caption":"stNodeapprove-any-idFlowProcessor",
+	"f_key":"stNodeapprove-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkRequest.docWorkRequest"
+	}
+}

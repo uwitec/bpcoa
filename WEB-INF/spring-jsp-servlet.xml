@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd" >
+<beans>
+	<bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+	</bean>
+	
+	<bean id="LoginService" class="com.mixky.app.action.login.LoginService"/>
+	
+	<bean id="beanNameViewResolver" class="org.springframework.web.servlet.view.BeanNameViewResolver"/>
+	
+	<bean id="jspUrlMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+	
+	<bean name="/login.do" class="com.mixky.app.action.login.LoginAction">
+		<property name="loginService">
+			<ref bean="LoginService"/>
+		</property>
+	</bean>	
+
+	<bean name="/logout.do" class="com.mixky.app.action.login.LogoutAction">
+		<property name="loginService">
+			<ref bean="LoginService"/>
+		</property>
+	</bean>
+	
+	<bean name="/home.do" class="com.mixky.app.action.HomeAction"/>
+	<bean name="/head.do" class="com.mixky.app.action.HeadAction"/>
+	<bean name="/page.do" class="com.mixky.app.action.engine.JspPageAction"/>
+	<bean name="/portlet.do" class="com.mixky.app.action.PortletAction"/>
+	
+	<bean name="/designtool/home.do" class="com.mixky.engine.action.DesignToolHomeAction"/>
+	
+	<bean name="/designtool/ui/properties.do" class="com.mixky.engine.action.PropertiesAction"/>
+	<bean name="/designtool/ui/objectgrideditor.do" class="com.mixky.engine.action.ObjectGridEditorAction"/>
+	<bean name="/designtool/ui/objectgriddetaileditor.do" class="com.mixky.engine.action.ObjectGridDetailEditorAction"/>
+	<bean name="/designtool/ui/templatefolder.do" class="com.mixky.engine.action.TemplateFolderAction"/>
+	<bean name="/designtool/ui/configuration.do" class="com.mixky.engine.action.ConfigurationAction"/>
+	<bean name="/designtool/ui/propertygrid.do" class="com.mixky.engine.action.PropertyGridAction"/>
+	<bean name="/designtool/ui/gridroweditor.do" class="com.mixky.engine.action.GridRowEditorAction"/>
+	<bean name="/designtool/ui/tableform.fieldmap.do" class="com.mixky.engine.action.TableFormFieldmapAction"/>
+	<bean name="/designtool/ui/document.authoritymap.do" class="com.mixky.engine.action.DocumentAuthorityMapAction"/>
+	<bean name="/designtool/ui/document.authoritymap.grid.do" class="com.mixky.engine.action.DocumentAuthorityMapGridAction"/>
+	<bean name="/designtool/ui/moduleauthority.do" class="com.mixky.engine.action.ModuleAuthorityAction"/>
+	<bean name="/designtool/ui/table.class.do" class="com.mixky.engine.action.TableClassAction"/>
+	<bean name="/designtool/ui/tableform.fieldpos.do" class="com.mixky.engine.action.TableFormFieldPosEditorAction"/>
+	<bean name="/designtool/ui/tableform.bgeditor.do" class="com.mixky.engine.action.TableFormBgEditorAction"/>
+	<bean name="/designtool/ui/workflow.do" class="com.mixky.engine.action.WorkFlowAction"/>
+	<bean name="/designtool/ui/node.do" class="com.mixky.engine.action.WorkFlowNodeAction"/>
+	<bean name="/designtool/ui/route.do" class="com.mixky.engine.action.WorkFlowRouteAction"/>
+	<bean name="/designtool/ui/relation.do" class="com.mixky.engine.action.WorkFlowRelationAction"/>
+	
+	<bean name="/designtool/organization/user.list.do" class="com.mixky.engine.action.OrganizationUserListAction"/>
+	<bean name="/designtool/organization/user.detail.editor.do" class="com.mixky.engine.action.OrganizationUserDetailEditorAction"/>
+	<bean name="/designtool/organization/dept.list.do" class="com.mixky.engine.action.OrganizationDeptListAction"/>
+	<bean name="/designtool/organization/role.list.do" class="com.mixky.engine.action.OrganizationRoleListAction"/>
+	<bean name="/designtool/desktop/menu.list.do" class="com.mixky.engine.action.DesktopMenuListAction"/>
+	<bean name="/designtool/dictionary/dictionary.list.do" class="com.mixky.engine.action.DictionaryListAction"/>
+	<bean name="/designtool/authority/menuauth.list.do" class="com.mixky.engine.action.MenuAuthorityListAction"/>
+	<bean name="/designtool/authority/moduleroleauth.list.do" class="com.mixky.engine.action.ModuleRoleAuthorityListAction"/>
+	<bean name="/designtool/organization/org.chart.do" class="com.mixky.engine.action.OrgChartAction"/>
+	
+	<bean name="/framework/engine/view/view.do" class="com.mixky.app.action.engine.DefaultViewAction"/>
+	<bean name="/framework/engine/document/documentpanel.do" class="com.mixky.app.action.engine.DocumentPanelAction"/>
+	<bean name="/framework/engine/workflow/flow.do" class="com.mixky.app.action.engine.FlowAction"/>
+	<bean name="/framework/engine/view/export.to.excel.do" class="com.mixky.engine.action.ViewExportToExcelAction"/>
+
+	<bean name="/engine/file/sysupload.do" class="com.mixky.engine.action.FileUploadAction"/>
+	<bean name="/engine/file/sysdownload.do" class="com.mixky.engine.action.FileDownloadAction"/>
+	<bean name="/app/file/filedownload.do" class="com.mixky.app.action.AppFileDownloadAction"/>
+	<bean name="/engine/file/sysupload2specifytable.do" class="com.mixky.engine.action.FileUpload2SpecifyTableAction"/>
+	
+	<import resource="mkoa-spring-jsp-servlet.xml"/>
+	
+	<!--确保以下定义的bean在配置文件最下方-->	
+	<bean name="springControllerInterceptor" class="com.mixky.system.spring.SpringControllerHandlerInterceptor">
+		<property name="ignoreList">
+			<list>
+				<value>/actionhere.do</value>
+			</list>
+		</property>
+		<property name="loginPage">
+			<value>/login.do</value>
+		</property>
+	</bean>
+	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator"/>
+	<bean class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+		<property name="advice" ref="springControllerInterceptor"/>
+		<property name="mappedNames">
+			<list>
+				<value>handleRequest</value>
+			</list>
+		</property>
+	</bean>
+</beans>

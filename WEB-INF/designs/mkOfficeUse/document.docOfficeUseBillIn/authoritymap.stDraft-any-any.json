@@ -1,0 +1,29 @@
+{
+	"f_state":"stDraft",
+	"f_authorities":
+	{
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_TYPE":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_NO":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_CREATOR_NAME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_CREATOR_DEPT":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_CREATE_TIME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL.F_NOTE":"0010",
+		"mkOfficeUse.docOfficeUseBillIn.pDetail.btnAdd":"0100",
+		"mkOfficeUse.docOfficeUseBillIn.pDetail.btnDelete":"0100",
+		"mkOfficeUse.docOfficeUseBillIn.pDetail.btnMoveUp":"0100",
+		"mkOfficeUse.docOfficeUseBillIn.pDetail.btnMoveDown":"0100",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL_DETAIL.F_NAME":"0010",
+		"mkOfficeUse.T_MK_APP_OFFICEUSE_BILL_DETAIL.F_NUMBER":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stDraft-any-any",
+	"f_caption":"stDraft-any-any",
+	"f_key":"stDraft-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkOfficeUse.docOfficeUseBillIn"
+	}
+}

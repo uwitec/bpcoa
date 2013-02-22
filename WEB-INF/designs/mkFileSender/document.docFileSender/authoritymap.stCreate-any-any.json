@@ -1,0 +1,31 @@
+{
+	"f_state":"stCreate",
+	"f_authorities":
+	{
+		"mkFileSender.docFileSender.btnDelete":"0010",
+		"mkFileSender.docFileSender.btnSave":"0010",
+		"mkFileSender.docFileSender.btnConfirm":"0010",
+		"mkFileSender.docFileSender.btnRead":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.ID":"1000",
+		"mkFileSender.T_MK_APP_FILESENDER.F_NAME":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_ISSUE_USER":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_ISSUE_DATE":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_ISSUE_DEPT":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_STATE":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_FILE":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_SCOPE":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_SCOPE_IDS":"0010",
+		"mkFileSender.T_MK_APP_FILESENDER.F_NOTE":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stCreate-any-any",
+	"f_caption":"stCreate-any-any",
+	"f_key":"stCreate-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkFileSender.docFileSender"
+	}
+}

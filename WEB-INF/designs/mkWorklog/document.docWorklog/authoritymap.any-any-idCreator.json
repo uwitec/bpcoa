@@ -1,0 +1,29 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkWorklog.docWorklog.btnDelete":"0100",
+		"mkWorklog.T_MK_APP_WORKLOG.F_USER":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_START_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_END_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_WORK_TYPE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_WORKLOAD":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_TITLE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_NOTE":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_CLIENT_NO":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_PROJECT_NO":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_UPDATE_TIME":"0010",
+		"mkWorklog.T_MK_APP_WORKLOG.F_USER_ID":"0010"
+	},
+	"f_identity":"idCreator",
+	"f_substate":"any",
+	"f_name":"any-any-idCreator",
+	"f_caption":"any-any-idCreator",
+	"f_key":"any-any-idCreator",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorklog.docWorklog"
+	},
+	"f_class":"authoritymap"
+}

@@ -1,0 +1,36 @@
+{
+	"f_views":
+	{
+		"classpath":"view",
+		"data":
+		[
+			{
+				"f_icon":"icon-sys-stat",
+				"f_url":"app/mkoa/officeuse/officeuse.stat",
+				"f_single_select":false,
+				"f_page_size":0,
+				"f_isquery":false,
+				"f_issummary":false,
+				"f_enable_favorite":false,
+				"f_name":"vStatOut",
+				"f_caption":"办公用品统计汇总表",
+				"f_key":"vStatOut",
+				"f_class":"view",
+				"f_i_parent":
+				{
+					"classpath":"query",
+					"data":"mkOfficeUse.qStat"
+				}
+			}
+		]
+	},
+	"f_name":"qStat",
+	"f_caption":"qStat",
+	"f_key":"qStat",
+	"f_class":"query",
+	"f_i_parent":
+	{
+		"classpath":"module",
+		"data":"mkOfficeUse"
+	}
+}

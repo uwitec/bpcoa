@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+	<!-- Group Parser Register -->
+	<bean id="mixky-groupparser-manager" class="com.mixky.engine.view.GroupManager">
+		<property name="customGroupParsersMap">
+			<map>
+				<entry key="110">
+					<list>
+						<ref bean="ForumCategoryTree"/>
+					</list>
+				</entry>
+				<entry key="111">
+					<list>
+						<ref bean="FavoriteTagTree"/>
+					</list>
+				</entry>
+				<entry key="FavoriteShareTagTree">
+					<list>
+						<ref bean="FavoriteShareTagTree"/>
+					</list>
+				</entry>
+				<entry key="112">
+					<list>
+						<ref bean="GzzdTagTree"/>
+					</list>
+				</entry>
+				<entry key="mknetfolder-personalfolder">
+					<list>
+						<ref bean="PersonalFolderGroup"/>
+					</list>
+				</entry>
+				<entry key="mknetfolder-sharedfolder">
+					<list>
+						<ref bean="ShareFolderGroup"/>
+					</list>
+				</entry>
+				<entry key="113">
+					<list>
+						<ref bean="AddressBookTagTree"/>
+					</list>
+				</entry>	
+				<entry key="ShareAddressBookTagTree">
+					<list>
+						<ref bean="ShareAddressBookTagTree"/>
+					</list>
+				</entry>	
+				<entry key="115">
+					<list>
+						<ref bean="KnowledgeTagTree"/>
+					</list>
+				</entry>	
+				<entry key="116">
+					<list>
+						<ref bean="KnowledgeTree"/>
+					</list>
+				</entry>
+				<entry key="MailTagGroup">
+					<list>
+						<ref bean="MailTagGroup"/>
+					</list>
+				</entry>
+				<entry key="MailShareTagGroup">
+					<list>
+						<ref bean="MailShareTagGroup"/>
+					</list>
+				</entry>
+				<entry key="FinanceTagTree">
+					<list>
+						<ref bean="FinanceTagTree"/>
+					</list>
+				</entry>
+				<entry key="FinanceSubjectTree">
+					<list>
+						<ref bean="FinanceSubjectTree"/>
+					</list>
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<bean id="ForumCategoryTree" class="com.mixky.app.mkoa.forum.group.ForumCategoryTree"/>
+	<bean id="FavoriteTagTree" class="com.mixky.app.mkoa.favorite.group.FavoriteTagTree"/>
+	<bean id="FavoriteShareTagTree" class="com.mixky.app.mkoa.favorite.group.FavoriteShareTagTree"/>
+	<bean id="GzzdTagTree" class="com.mixky.app.mkoa.gzzd.GzzdTagTree"/>
+	<bean id="PersonalFolderGroup" class="com.mixky.app.mkoa.netfolder.group.PersonalFolderGroup"/>
+	<bean id="ShareFolderGroup" class="com.mixky.app.mkoa.netfolder.group.ShareFolderGroup"/>
+	<bean id="AddressBookTagTree" class="com.mixky.app.mkoa.addressbook.group.AddressBookTagTree"/>
+	<bean id="ShareAddressBookTagTree" class="com.mixky.app.mkoa.addressbook.group.ShareAddressBookTagTree"/>
+	<bean id="KnowledgeTagTree" class="com.mixky.app.mkoa.knowledge.group.KnowledgeTagTree"/>
+	<bean id="KnowledgeTree" class="com.mixky.app.mkoa.knowledge.group.KnowledgeTree"/>
+	<bean id="MailTagGroup" class="com.mixky.app.mkoa.mail.group.MailTagGroup"/>
+	<bean id="MailShareTagGroup" class="com.mixky.app.mkoa.mail.group.MailShareTagGroup"/>
+	<bean id="FinanceTagTree" class="com.mixky.app.mkoa.finance.group.FinanceTagTree"/>
+	<bean id="FinanceSubjectTree" class="com.mixky.app.mkoa.finance.group.FinanceSubjectTree"/>
+</beans>

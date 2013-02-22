@@ -1,0 +1,29 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkFavorite.docFavorite.btnSave":"0100",
+		"mkFavorite.docFavorite.btnConfirm":"0100",
+		"mkFavorite.docFavorite.pInfo":"0100",
+		"mkFavorite.T_MK_APP_FAVORITE.ID":"1000",
+		"mkFavorite.T_MK_APP_FAVORITE.F_USER_ID":"1000",
+		"mkFavorite.T_MK_APP_FAVORITE.F_TITLE":"0010",
+		"mkFavorite.T_MK_APP_FAVORITE.F_TAGS":"0010",
+		"mkFavorite.T_MK_APP_FAVORITE.F_NOTE":"0010",
+		"mkFavorite.T_MK_APP_FAVORITE.F_CREATE_TIME":"0100",
+		"mkFavorite.T_MK_APP_FAVORITE.F_SOURCE_KEY":"1000",
+		"mkFavorite.T_MK_APP_FAVORITE.F_SOURCE_NAME":"0100",
+		"mkFavorite.T_MK_APP_FAVORITE.F_SOURCE_PARAM":"1000"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"any-any-any",
+	"f_caption":"any-any-any",
+	"f_key":"any-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkFavorite.docFavorite"
+	}
+}

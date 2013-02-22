@@ -1,0 +1,35 @@
+{
+	"f_state":"stAdd",
+	"f_authorities":
+	{
+		"mkScore.docScoreUser.btnSave":"0100",
+		"mkScore.docScoreUser.btnDelete":"0100",
+		"mkScore.docScoreUser.btnConfirm":"0100",
+		"mkScore.docScoreUser.pScoreUser":"0100",
+		"mkScore.T_MK_BPC_SCORE_USER.ID":"1010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_USER_ID":"1010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_MANAGER_ID":"1010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_USER_NAME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_MANAGER_NAME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_SCORE":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_STATE":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_STATE_TIME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_CREATOR_NAME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_CREATE_TIME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_UPDATOR_NAME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_UPDATE_TIME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_ENTRY_TIME":"0010",
+		"mkScore.T_MK_BPC_SCORE_USER.F_QUIT_TIME":"0010"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stAdd-any-any",
+	"f_caption":"stAdd-any-any",
+	"f_key":"stAdd-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkScore.docScoreUser"
+	}
+}

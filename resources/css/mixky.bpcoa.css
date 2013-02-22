@@ -1,0 +1,18 @@
+.bpcproject-task-noleaf{
+	background-color:#FFFFFF;
+}
+.bpcproject-task-closed{
+	color : gray;
+}
+.bpcproject-task-canceled{
+	color : #B22222;
+}
+.bpcproject-task-plan{
+	color : #000000;
+}
+.bpcproject-task-execute{
+	color : #228B22;
+}
+.bpcproject-task-over{
+	color : #8B0000;
+}

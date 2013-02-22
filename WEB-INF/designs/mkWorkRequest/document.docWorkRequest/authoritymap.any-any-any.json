@@ -1,0 +1,34 @@
+{
+	"f_state":"any",
+	"f_authorities":
+	{
+		"mkWorkRequest.docWorkRequest.pInfo":"0100",
+		"mkWorkRequest.docWorkRequest.pContent":"0100",
+		"mkWorkRequest.docWorkRequest.pFlowInstanceViewer":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.ID":"1000",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_STATE":"0010",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_TITLE":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_NO":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_OPINION":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_RESULT":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_PROCESSORS":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_USER_NAME":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_DEPT":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_CREATE_TIME":"1000",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_UPDATE_TIME":"1000",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_CREATOR_ID":"1000",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_FLOWLOGID":"1000",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_FILES":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"any-any-any",
+	"f_caption":"any-any-any",
+	"f_key":"any-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkRequest.docWorkRequest"
+	}
+}

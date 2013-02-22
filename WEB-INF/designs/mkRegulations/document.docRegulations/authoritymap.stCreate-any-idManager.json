@@ -1,0 +1,16 @@
+{
+	"f_state":"stCreate",
+	"f_authorities":
+	{},
+	"f_identity":"idManager",
+	"f_substate":"any",
+	"f_name":"stCreate-any-idManager",
+	"f_caption":"stCreate-any-idManager",
+	"f_key":"stCreate-any-idManager",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkRegulations.docRegulations"
+	},
+	"f_class":"authoritymap"
+}

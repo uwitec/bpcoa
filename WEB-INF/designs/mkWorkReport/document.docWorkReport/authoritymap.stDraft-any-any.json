@@ -1,0 +1,21 @@
+{
+	"f_state":"stDraft",
+	"f_authorities":
+	{
+		"mkWorkReport.docWorkReport.btnDelete":"0100",
+		"mkWorkReport.docWorkReport.btnSave":"0100",
+		"mkWorkReport.docWorkReport.btnConfirm":"0100",
+		"mkWorkReport.docWorkReport.btnIssue":"0100"
+	},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stDraft-any-any",
+	"f_caption":"stDraft-any-any",
+	"f_key":"stDraft-any-any",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkReport.docWorkReport"
+	},
+	"f_class":"authoritymap"
+}

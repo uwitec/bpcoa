@@ -1,0 +1,37 @@
+{
+	"f_from":"T_MK_APP_FORUM_SUBJECT",
+	"f_views":
+	{
+		"classpath":"view",
+		"data":
+		[
+			{
+				"f_icon":"icon-app-mkoa-knowledgedetail",
+				"f_url":"app/mkoa/forum/forum.topic",
+				"f_single_select":false,
+				"f_page_size":0,
+				"f_isquery":false,
+				"f_issummary":false,
+				"f_enable_favorite":false,
+				"f_name":"vForumTopic",
+				"f_caption":"论坛帖子",
+				"f_key":"vForumTopic",
+				"f_class":"view",
+				"f_i_parent":
+				{
+					"classpath":"query",
+					"data":"mkForum.qForumTopic"
+				}
+			}
+		]
+	},
+	"f_name":"qForumTopic",
+	"f_caption":"论坛话题明细",
+	"f_key":"qForumTopic",
+	"f_class":"query",
+	"f_i_parent":
+	{
+		"classpath":"module",
+		"data":"mkForum"
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"f_state":"stNodecompose",
+	"f_authorities":
+	{
+		"mkWorkRequest.docWorkRequest.btnSave":"0100",
+		"mkWorkRequest.docWorkRequest.pContent":"0010",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.ID":"1000",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_STATE":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_TITLE":"0010",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_NO":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_OPINION":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_RESULT":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_PROCESSORS":"0100",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_USER_NAME":"0010",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_DEPT":"0010",
+		"mkWorkRequest.T_MK_APP_WORKREQUEST.F_FILES":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"stNodecompose-any-idFlowProcessor",
+	"f_caption":"stNodecompose-any-idFlowProcessor",
+	"f_key":"stNodecompose-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkWorkRequest.docWorkRequest"
+	}
+}

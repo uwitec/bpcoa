@@ -1,0 +1,16 @@
+{
+	"f_state":"stNew",
+	"f_authorities":
+	{},
+	"f_identity":"any",
+	"f_substate":"any",
+	"f_name":"stNew-any-any",
+	"f_caption":"stNew-any-any",
+	"f_key":"stNew-any-any",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkMail.docAccount"
+	}
+}

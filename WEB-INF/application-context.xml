@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+
+	<bean id="configBean" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>/WEB-INF/params.properties</value>
+		</property>
+		<property name="fileEncoding">
+			<value>UTF-8</value>
+		</property>
+	</bean>
+
+	<bean id="mixky-application-parameters" class="com.mixky.app.ApplicationParameters">
+		<property name="applicationName">
+			<value>${mixky.applicationname}</value>
+		</property>
+		<property name="applicationServerType">
+			<value>tomcat</value>
+		</property>
+		<property name="fileUploadPath">
+			<value>/WEB-INF/jsp/app/mkoa/upload</value>
+		</property>
+		<property name="resourcePath">
+			<value>/resources</value>
+		</property>
+		<property name="useIdentifyCode">
+			<value>false</value>
+		</property>
+		<property name="applicationCode">
+			<value>mkoa</value>
+		</property>
+		<property name="sncode">
+			<value>${mixky.sncode}</value>
+		</property>
+		<property name="dataSources">
+			<map>
+				<entry key="mkoa">
+					<ref bean="mkoa-datasource"/>
+				</entry>
+			</map>
+		</property>
+		
+		<property name="applicationLoginPath">
+			<value>login</value>
+		</property>
+		<property name="applicationHomePath">
+			<value>home</value>
+		</property>
+		<property name="applicationRunMode">
+			<value>sysdebug</value>
+		</property>	
+		<property name="jsCompress">
+			<value>false</value>
+		</property>	
+		<property name="userConfigFolder">
+			<value>app/mkoa/userconfigs</value>
+		</property>	
+		<property name="handSignFolder">
+			<value>app/mkoa/userconfigs/handsign</value>
+		</property>
+		<property name="imService">
+			<value>false</value>
+		</property>
+		<property name="oaUrl">
+			<value>${im.oaurl}</value>
+		</property>
+	</bean>
+	<bean id="mkoa-datasource" class="com.garage.xdatasource.XDataSource">
+		<property name="isDefault">
+			<value>true</value>
+		</property>
+		<property name="dbType">
+			<value>${jdbc.dbtype}</value>
+		</property>
+		<property name="jdbcDriverClassName">
+			<value>${jdbc.driverClassName}</value>
+			<!--<value>com.mysql.jdbc.Driver</value>-->
+		</property>
+		<property name="jdbcConnectionUrl">
+			<value>${jdbc.url}</value>
+		</property>
+		<property name="jdbcUserName">
+			<value>${jdbc.username}</value>
+		</property>
+		<property name="jdbcUserPass">
+			<value>${jdbc.password}</value>
+		</property>
+		<property name="binaryImplementClass">
+			<value>${jdbc.binaryimp}</value>
+		</property>
+		<property name="blobbuffersize">
+			<value>1024000</value>
+		</property>
+		<property name="clobbuffersize">
+			<value>1024000</value>
+		</property>
+		<property name="dbcpMaxIdle">
+			<value>1</value>
+		</property>
+		<property name="dbcpMaxWait">
+			<value>-1</value>
+		</property>
+		<property name="dbcpMaxActive">
+			<value>5</value>
+		</property>
+	</bean>
+	
+ 	<bean id="mixky-dbaccess" class="com.mixky.common.database.MixkyDataAccess">
+		<property name="dataAccessTemplateImp" ref="garage-dbaccess-implement"/>
+		<property name="dataCacheRules">
+			<list>
+				<ref bean="mixky-dbcache-user"/>
+				<ref bean="mixky-dbcache-dept"/>
+				<ref bean="mixky-dbcache-role"/>
+				<ref bean="mixky-dbcache-role-user"/>
+				<ref bean="mixky-dbcache-dept-user"/>
+				<ref bean="mixky-dbcache-menu"/>
+				<ref bean="mixky-dbcache-dictionary"/>
+				<ref bean="mixky-dbcache-dictionarydata"/>
+				<ref bean="mixky-dbcache-modulerole"/>
+			</list>
+		</property>
+	</bean>
+	<bean id="garage-dbaccess-implement" class="com.mixky.common.database.GarageDataAccessTemplate"/>
+	
+	<bean id="mixky-dbcache-user" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_user</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.organization.User</value>
+		</property>
+		<property name="indexs">
+			<list>
+				<value>f_name</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-dept" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_dept</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.organization.Dept</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-role" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_role</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.organization.Role</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-role-user" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_role_user</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.organization.RoleUser</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-dept-user" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_dept_user</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.organization.DeptUser</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-menu" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_menu</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.desktop.Menu</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-dictionary" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_dictionary</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.dictionary.Dictionary</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-dictionarydata" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_dictionary_data</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.dictionary.DictionaryData</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dbcache-modulerole" class="com.garage.xdatabase.cache.TableCacheConfig">
+		<property name="tablename">
+			<value>t_mk_sys_module_role</value>
+		</property>
+		<property name="classname">
+			<value>com.mixky.engine.authority.ModuleRoleAuth</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-user-certification" class="com.mixky.app.certification.MixkyUserCertification">
+		<property name="userCertificationImp" ref="user-certification-viacookie"/>
+	</bean>
+	<bean id="user-certification-viacookie" class="com.mixky.app.certification.UserCertificationViaCookie">
+		<property name="DOMAIN_NAME">
+			<value></value>
+		</property>	
+	</bean> 
+	
+	<bean id="mixky-object-cloner" class="com.mixky.common.clone.ObjectCloneContainer">
+		<!-- property name="mapping">
+			<map>
+				<entry key="identifier of obj">
+					<value>com.mixky.cms.dyndatasource.DataSourceBasic</value>
+				</entry>
+			</map>
+		</property -->
+	</bean>
+	
+	<bean id="mixky-jsonfile-serializer" class="com.mixky.common.serialize.JsonFileSerializer">
+		<property name="fileRoot">
+			<value>WEB-INF/designs</value>
+		</property>
+	</bean>
+	
+	<!-- Event Handler Register -->
+	<import resource="application-context-event.xml"/>
+	
+	<!-- Group Parser Register -->
+	<import resource="application-context-group.xml"/>
+	
+	<!-- Field Implement Register -->
+	<import resource="application-context-field.xml"/>
+	
+	
+	<!-- Instant Message Register -->
+	<import resource="application-im-service.xml"/>
+	
+	
+	<!-- Instant Message Register -->
+	<import resource="application-msg-service.xml"/>
+	
+	<!-- Instant thread Register -->
+
+	<import resource="application-context-thread.xml"/>
+	
+	
+	<bean id="WorkRequestSerialNumberHelper" class="com.mixky.app.mkoa.toolkit.SerialNumberHelper">
+		<property name="title">
+			<value>创想天空</value>
+		</property>
+		<property name="type">
+			<value>请示</value>
+		</property>
+		<property name="numberLength">
+			<value>4</value>
+		</property>
+		<property name="tablename">
+			<value>t_mk_app_workrequest</value>
+		</property>
+		<property name="fieldname">
+			<value>f_no</value>
+		</property>
+		<property name="sqlwhere">
+			<value>f_no like '|title|[|type|]|year|-%'</value>
+		</property>
+		<property name="format">
+			<value>|title|[|type|]|year|-|number|</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-menu-builder" class="com.mixky.app.js.MenuBuilder">
+		<property name="advancedMenus">
+			<list>
+				<value>mkMail</value>
+				<value>mkMs</value>
+			</list>
+		</property>
+		<property name="basicPath">
+			<value>/framework/mixky.app.menus.js</value>
+		</property>
+		<property name="advancePath">
+			<value>/framework/mixky.app.menus.advanced.js</value>
+		</property>
+	</bean>
+	
+	<bean id="mixky-dictionary-builder" class="com.mixky.app.js.DictionaryBuilder">
+		<property name="buildPath">
+			<value>/framework/mixky.app.dictionarys.js</value>
+		</property>
+	</bean>
+	
+	
+	<bean id="js_compiler_manager" class="com.mixky.app.JsCompileManager">
+		<property name="jsComplieObjects">
+			<list>
+				<bean id="mixky-js-framework" class="com.mixky.app.JsCompileObject">
+					<property name="outputFilePath" value="framework/mixky.framework.min.js"></property>
+					<property name="sourceFilesPath">
+						<list>
+							<value>framework/mixky.app.dictionarys.js</value>
+							<value>framework/mixky.app.common.js</value>
+							<value>framework/mixky.app.actions.js</value>
+							<value>framework/mixky.app.modules.js</value>
+							<value>framework/mixky.app.documents.js</value>
+							<value>framework/mixky.app.views.js</value>
+							<value>framework/mixky.app.menus.js</value>
+							<value>framework/desktop/mixky.desktop.js</value>
+							<value>framework/engine/mixky.app.module.js</value>
+							<value>framework/engine/mixky.app.document.js</value>
+							<value>framework/mixky.app.workflow.js</value>
+							<value>framework/mixky.app.js</value>
+						</list>
+					</property>
+				</bean>
+				<bean id="mikxy-js-webpage" class="com.mixky.app.JsCompileObject">
+					<property name="outputFilePath" value="framework/mixky.desktop.webpage.min.js"></property>
+					<property name="sourceFilesPath">
+						<list>
+							<value>framework/desktop/mixky.desktop.webpage.js</value>
+						</list>
+					</property>
+				</bean>
+				<bean id="mixky-js-window" class="com.mixky.app.JsCompileObject">
+					<property name="outputFilePath" value="framework/mixky.desktop.window.min.js"></property>
+					<property name="sourceFilesPath">
+						<list>
+							<value>framework/desktop/mixky.desktop.window.js</value>
+						</list>
+					</property>
+				</bean>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 上下文环境变量 -->
+	<bean id="mixky-contextvarialbes-container" class="com.mixky.engine.context.ContextVariablesContainer">
+		<property name="parsers">
+			<map>
+				<entry key="AttendanceContextVariablesParser">
+					<list>
+						<ref bean="AttendanceContextVariablesParser"/>
+					</list>
+				</entry>
+			</map>
+		</property>
+		<!--property name="variables">
+			<map>
+				<entry key="test">
+					<value>test</value>
+				</entry>
+			</map>
+		</property-->
+	</bean>
+	<bean id="AttendanceContextVariablesParser" class="com.mixky.app.mkoa.attendance.AttendanceContextVariablesParser"/>
+</beans>
