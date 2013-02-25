@@ -1,15 +1,15 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ page import="com.mixky.app.bpcoa.project.BpcProjectManager"%>
 <%
-String panelid = request.getParameter("panelid");
+String parent_panelid = request.getParameter("parent_panelid");
 String projectid = request.getParameter("projectid");
 %>
 <script language='javascript'>
 Ext.onReady(function(){
 	var panel = Ext.getCmp('pnl-import-task');
-	
 	var winSelf = panel.findParentByType('window');
-	var panelParent = Ext.getCmp('<%=panelid%>');
+	var panelParent = Ext.getCmp('<%=parent_panelid%>');
+
 	var btnImport =  new Mixky.plugins.UploadButton({
 		text : "导入任务",
 		iconCls : "icon-sys-btnimport",
@@ -22,6 +22,8 @@ Ext.onReady(function(){
 			},
 			listeners : {
 				'allUploadsComplete' : function(){
+					winSelf.close();
+					panelParent.refresh();
 				},
 				'startUpload': function(){
 					var tmplTypeValue = Ext.getCmp("comboTmplType").getValue();

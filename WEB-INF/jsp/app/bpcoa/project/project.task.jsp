@@ -67,7 +67,7 @@ Ext.onReady(function(){
 		menu : new Ext.menu.Menu({
 			items : [{
 	        	text : '根任务',
-	        	iconCls : 'icon-app-bpcoa-project-roottask',
+	        	iconCls : 'icon-app-bpcoa-project-taskroot',
 	        	handler : function() {
 	        		panel.addProjectTask({
 	        			F_PARENT_ID : 0
@@ -75,12 +75,12 @@ Ext.onReady(function(){
 	        	}
 	        }, '-', {
 	        	text : '子任务',
-	        	iconCls : 'icon-app-bpcoa-project-subtask',
+	        	iconCls : 'icon-app-bpcoa-project-tasksub',
 	        	handler : function() {
 					var node = tree.getSelectionModel().getSelectedNode();
 					if(node && node != null){
 						var state = node.attributes.F_STATE;
-						if(node.attributes.F_MANAGER_ID == Mixky.app.UserInfo.id && (state == '计划' || state == '执行')){
+						if(node.attributes.F_MANAGER_ID == Mixky.app.UserInfo.id && (state == '计划' || state == '执行' || !node.isLeaf())){
 			        		panel.addProjectTask({
 			        			F_PARENT_ID : node.attributes.key
 			        		});
@@ -93,7 +93,7 @@ Ext.onReady(function(){
 	        	}
 	        }, '-', {
 	        	text : '临时任务',
-	        	iconCls : 'icon-app-bpcoa-project-temptask',
+	        	iconCls : 'icon-app-bpcoa-project-tasktemp',
 	        	handler : function() {
 	        		panel.addProjectTask({
 	        			F_TITLE : '新建临时任务',
@@ -117,7 +117,7 @@ Ext.onReady(function(){
 				params : {
 					url:'app/bpcoa/project/import.task',
 					projectid: parseInt(panel.F_PROJECT_ID),
-					panelid: '<%=panelid%>'
+					parent_panelid: '<%=panelid%>'
 				},
 				loadScripts : true,
 				scripts	: true
@@ -171,6 +171,10 @@ Ext.onReady(function(){
 		border : false,
         rootVisible : false,
         autoExpandColumn : 'F_DESCRIBE',
+        enableDD: true,
+        dropConfig : {
+        	allowParentInsert : true
+        },
         tbar : ['负责人：', cboUser, '-', '状态：', cboState, '->', btnAddTask, '-', btnEditTask,'-', btnRefresh],
         contextMenu : new Ext.menu.Menu({items : [btnAddTask, '-', btnEditTask,'-', btnRefresh]}),
 		columns:[{
@@ -254,6 +258,25 @@ Ext.onReady(function(){
 			'destroy' : function(){
 				Ext.destroy(this.contextMenu);
 				this.contextMenu = null;
+			},
+			'beforenodedrop' : function(e){
+				// TODO 判断是否允许拖拽
+				
+			},
+			'dragdrop' : function(t, n, dd, e){
+				var taskId = n.attributes.key;
+				var parentId = 0;
+				if(n.parentNode.getDepth() > 0){
+					parentId = n.parentNode.attributes.key;
+				}
+				BpcProjectAppDirect.moveTask(taskId, parentId, function(result, event) {
+					if (result && result.success) {
+						// 刷新被更新过的父节点
+					}else{
+						MixkyApp.showErrorMessage('移动任务节点操作失败，请重试！');
+						panel.refresh();
+					}
+				});
 			}
 		}
 	});
