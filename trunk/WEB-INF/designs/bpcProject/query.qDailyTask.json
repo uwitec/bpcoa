@@ -6,6 +6,7 @@
 		"data":
 		[
 			{
+				"f_icon":"icon-app-bpcoa-project-dailytaskcfg",
 				"f_buttons":
 				{
 					"classpath":"action",

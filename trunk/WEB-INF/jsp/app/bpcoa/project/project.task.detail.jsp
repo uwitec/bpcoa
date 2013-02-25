@@ -132,6 +132,7 @@ Ext.onReady(function(){
 						break;
 					}
 				}
+				form.doLayout();
 			});
 		}
 	}

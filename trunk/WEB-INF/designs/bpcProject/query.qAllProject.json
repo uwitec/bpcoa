@@ -6,7 +6,7 @@
 		"data":
 		[
 			{
-				"f_icon":"icon-sys-explorer",
+				"f_icon":"icon-app-bpcoa-project-allproject",
 				"f_url":"app/bpcoa/project/project.all",
 				"f_columns":
 				{
@@ -282,7 +282,7 @@
 				}
 			},
 			{
-				"f_icon":"icon-app-bpcoa-project-dailytask",
+				"f_icon":"icon-app-bpcoa-project-dailytaskmgr",
 				"f_url":"app/bpcoa/project/normal.task",
 				"f_keycolumn":"",
 				"f_single_select":false,

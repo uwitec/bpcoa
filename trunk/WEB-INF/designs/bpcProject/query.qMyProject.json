@@ -7,7 +7,28 @@
 		"data":
 		[
 			{
-				"f_icon":"icon-sys-explore",
+				"f_icon":"icon-app-bpcoa-project-myproject",
+				"f_buttons":
+				{
+					"classpath":"action",
+					"data":
+					[
+						{
+							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n\t\tMixkyApp.desktop.openDocument('bpcProject.docProject', id);\n\t}\n}\n",
+							"f_default":true,
+							"f_order":1,
+							"f_name":"btnOpen",
+							"f_caption":"打开",
+							"f_key":"btnOpen",
+							"f_class":"action",
+							"f_i_parent":
+							{
+								"classpath":"view",
+								"data":"bpcProject.qMyProject.vList"
+							}
+						}
+					]
+				},
 				"f_columns":
 				{
 					"classpath":"column",
