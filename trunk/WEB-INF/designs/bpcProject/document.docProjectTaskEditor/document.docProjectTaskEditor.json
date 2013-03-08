@@ -1,5 +1,16 @@
 {
 	"f_icon":"icon-app-bpcoa-project-task",
+	"f_i_authority_maps":
+	{
+		"classpath":"authoritymap",
+		"data":
+		[
+			"bpcProject.docProjectTaskEditor.any-any-any",
+			"bpcProject.docProjectTaskEditor.any-any-idProjectBoss",
+			"bpcProject.docProjectTaskEditor.any-any-idProjectManager",
+			"bpcProject.docProjectTaskEditor.any-any-idTaskManager"
+		]
+	},
 	"f_panels":
 	{
 		"classpath":"panel",
@@ -31,23 +42,9 @@
 		"data":
 		[
 			{
-				"f_handler":"function(){\n\tthis.document.confirmDocument();\n}",
-				"f_default":false,
-				"f_order":4,
-				"f_name":"btnConfirm",
-				"f_caption":"确定",
-				"f_key":"btnConfirm",
-				"f_class":"action",
-				"f_i_parent":
-				{
-					"classpath":"document",
-					"data":"bpcProject.docProjectTaskEditor"
-				}
-			},
-			{
+				"f_order":1,
 				"f_handler":"function(){\n\tthis.document.deleteDocument();\n}",
 				"f_default":false,
-				"f_order":1,
 				"f_name":"btnDelete",
 				"f_caption":"删除",
 				"f_key":"btnDelete",
@@ -59,8 +56,8 @@
 				}
 			},
 			{
-				"f_default":false,
 				"f_order":2,
+				"f_default":false,
 				"f_name":"btnCancel",
 				"f_caption":"撤销",
 				"f_key":"btnCancel",
@@ -72,12 +69,26 @@
 				}
 			},
 			{
+				"f_order":3,
 				"f_handler":"function(){\n\tthis.document.submitDocument();\n}",
 				"f_default":false,
-				"f_order":3,
 				"f_name":"btnSave",
 				"f_caption":"保存",
 				"f_key":"btnSave",
+				"f_class":"action",
+				"f_i_parent":
+				{
+					"classpath":"document",
+					"data":"bpcProject.docProjectTaskEditor"
+				}
+			},
+			{
+				"f_order":4,
+				"f_handler":"function(){\n\tthis.document.confirmDocument();\n}",
+				"f_default":false,
+				"f_name":"btnConfirm",
+				"f_caption":"确定",
+				"f_key":"btnConfirm",
 				"f_class":"action",
 				"f_i_parent":
 				{
@@ -151,6 +162,59 @@
 				"f_caption":"关闭",
 				"f_key":"stClosed",
 				"f_class":"state",
+				"f_i_parent":
+				{
+					"classpath":"document",
+					"data":"bpcProject.docProjectTaskEditor"
+				}
+			}
+		]
+	},
+	"f_identitys":
+	{
+		"classpath":"identity",
+		"data":
+		[
+			{
+				"f_judge_source_type":0,
+				"f_operator":0,
+				"f_judge_target":"|F_MANAGER_ID|",
+				"f_judge_target_type":1,
+				"f_name":"idTaskManager",
+				"f_caption":"任务负责人",
+				"f_key":"idTaskManager",
+				"f_class":"identity",
+				"f_i_parent":
+				{
+					"classpath":"document",
+					"data":"bpcProject.docProjectTaskEditor"
+				}
+			},
+			{
+				"f_judge_source_type":0,
+				"f_operator":0,
+				"f_judge_target":"bpcProject.mrProjectBoss",
+				"f_judge_target_type":8,
+				"f_name":"idProjectBoss",
+				"f_caption":"总项目负责人",
+				"f_key":"idProjectBoss",
+				"f_class":"identity",
+				"f_i_parent":
+				{
+					"classpath":"document",
+					"data":"bpcProject.docProjectTaskEditor"
+				}
+			},
+			{
+				"f_judge_source":"com.mixky.app.bpcoa.project.identify.IdProjectManager",
+				"f_judge_source_type":0,
+				"f_operator":99,
+				"f_judge_target":"",
+				"f_judge_target_type":99,
+				"f_name":"idProjectManager",
+				"f_caption":"项目经理及上级任务负责人",
+				"f_key":"idProjectManager",
+				"f_class":"identity",
 				"f_i_parent":
 				{
 					"classpath":"document",

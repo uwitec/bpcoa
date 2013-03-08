@@ -80,13 +80,20 @@ Ext.onReady(function(){
 					var node = tree.getSelectionModel().getSelectedNode();
 					if(node && node != null){
 						var state = node.attributes.F_STATE;
-						if(node.attributes.F_MANAGER_ID == Mixky.app.UserInfo.id && (state == '计划' || state == '执行' || !node.isLeaf())){
-			        		panel.addProjectTask({
-			        			F_PARENT_ID : node.attributes.key
-			        		});
-						}else{
-							MixkyApp.showErrorMessage('状态不合法，不允许创建下级任务！');
-						}
+						BpcProjectAppDirect.getTaskAuthority(node.attributes.key, function(result, e){
+							if((result.isParentTaskManager || result.isTaskManager) && (state == '计划' || state == '执行' || !node.isLeaf())){
+
+								//if(node.attributes.F_MANAGER_ID == Mixky.app.UserInfo.id && (state == '计划' || state == '执行' || !node.isLeaf())){
+					        		panel.addProjectTask({
+					        			F_PARENT_ID : node.attributes.key
+					        			
+					        		});
+								}else{
+									MixkyApp.showErrorMessage('状态不合法，不允许创建下级任务！');
+								}
+								
+							//}
+						});
 					}else{
 						MixkyApp.showInfoMessage('请选择父任务节点！');
 					}
@@ -298,7 +305,7 @@ Ext.onReady(function(){
 			url : 'page.do',
 			params : {
 				url : 'app/bpcoa/project/project.task.detail',
-				panelid : detailId,
+				panelid : detailId
 			},
 			scripts : true
 		},

@@ -110,7 +110,7 @@ Ext.onReady(function(){
 	});
 	
 	var lblManager = new Ext.form.Label({
-		text: '评分人: <%=user.getF_caption()%>',
+		text: '评分人: <%=user.getF_caption()%>'
 	});
 	
 	var btnSave = new Ext.Action({
@@ -178,7 +178,7 @@ Ext.onReady(function(){
 			id : 'F_DEPT_NAME',
 			dataIndex : 'F_DEPT_NAME',
 			header : '部门',
-			width : 100,
+			width : 100
 			// renderer : numberRenderer
 		}, {
 			id : 'F_SCORE',
@@ -191,7 +191,7 @@ Ext.onReady(function(){
 			id : 'F_SCOREDATE',
 			dataIndex : 'F_SCOREDATE',
 			header : '打分日期',
-			width : 100,
+			width : 100
 			// renderer : numberRenderer
 		}],
 		plugins : [roweditor],
@@ -269,7 +269,7 @@ Ext.onReady(function(){
 		height : 150,
 		split : true,
 		border : false,
-		layout : 'fit',
+		layout : 'fit'
 	});
 	Ext.apply(worklogPanel.autoLoad.params, 
 			{panelid : worklogPanel.getId(), userid : param_userid, username: param_username, date : store.baseParams.day});

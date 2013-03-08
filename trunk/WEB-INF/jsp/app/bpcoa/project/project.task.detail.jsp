@@ -68,11 +68,18 @@ Ext.onReady(function(){
 			text : '关闭任务',
 			iconCls : 'icon-sys-close',
 			handler : function(){
-				form.setValues({
-					F_PROGRESS : 100,
-					F_STATE : '关闭'
+				//增加提示按钮
+				Ext.Msg.confirm('关闭警告','关闭该任务将无法重新执行，您确定吗？',function(btn){
+				if(btn == 'yes')
+					{
+
+						form.setValues({
+							F_PROGRESS : 100,
+							F_STATE : '关闭'
+						});
+						form.saveRecord(panel.panel.refresh);
+					}
 				});
-				form.saveRecord(panel.panel.refresh);
 			}
 		}]
 	});
