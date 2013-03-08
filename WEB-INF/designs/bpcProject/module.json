@@ -1,6 +1,5 @@
 {
 	"f_type":2,
-	"f_icon":"icon-app-bpcoa-project",
 	"f_roles":
 	{
 		"classpath":"modulerole",
@@ -49,9 +48,21 @@
 					"classpath":"module",
 					"data":"bpcProject"
 				}
+			},
+			{
+				"f_name":"mrProjectBoss",
+				"f_caption":"总项目负责人",
+				"f_key":"mrProjectBoss",
+				"f_class":"modulerole",
+				"f_i_parent":
+				{
+					"classpath":"module",
+					"data":"bpcProject"
+				}
 			}
 		]
 	},
+	"f_icon":"icon-app-bpcoa-project",
 	"f_authorities":
 	{
 		"bpcProject.mnuAddProject":
@@ -65,6 +76,7 @@
 		"data":
 		[
 			{
+				"f_order":4,
 				"f_icon":"icon-app-bpcoa-project-allproject",
 				"f_formenu":true,
 				"f_default":false,
@@ -78,7 +90,6 @@
 					"classpath":"group",
 					"data":"bpcProject.qAllProject.byYear"
 				},
-				"f_order":4,
 				"f_forshortcut":false,
 				"f_name":"mnuAllProject",
 				"f_caption":"所有项目",
@@ -91,6 +102,7 @@
 				}
 			},
 			{
+				"f_order":3,
 				"f_icon":"icon-app-bpcoa-project-myproject",
 				"f_formenu":true,
 				"f_default":false,
@@ -104,7 +116,6 @@
 					"classpath":"group",
 					"data":"bpcProject.qMyProject.gByState"
 				},
-				"f_order":3,
 				"f_forshortcut":false,
 				"f_name":"mnuMyProject",
 				"f_caption":"我的项目",
@@ -117,11 +128,11 @@
 				}
 			},
 			{
+				"f_order":1,
 				"f_icon":"icon-sys-add",
 				"f_handler":"function(){\n\tMixkyApp.desktop.openDocument('bpcProject.docProject');\n}",
 				"f_formenu":true,
 				"f_default":false,
-				"f_order":1,
 				"f_forshortcut":false,
 				"f_name":"mnuAddProject",
 				"f_caption":"创建项目",
@@ -134,6 +145,7 @@
 				}
 			},
 			{
+				"f_order":5,
 				"f_icon":"icon-app-bpcoa-project-task",
 				"f_formenu":true,
 				"f_default":false,
@@ -147,7 +159,6 @@
 					"classpath":"group",
 					"data":"bpcProject.qAllProject.gByProject"
 				},
-				"f_order":5,
 				"f_forshortcut":false,
 				"f_name":"mnuProjectTask",
 				"f_caption":"项目任务管理",
@@ -160,6 +171,7 @@
 				}
 			},
 			{
+				"f_order":6,
 				"f_icon":"icon-app-bpcoa-project-dailytaskmgr",
 				"f_formenu":true,
 				"f_default":false,
@@ -168,7 +180,6 @@
 					"classpath":"view",
 					"data":"bpcProject.qAllProject.vNormalTask"
 				},
-				"f_order":6,
 				"f_forshortcut":false,
 				"f_name":"mnuNormalTask",
 				"f_caption":"日常任务管理",
@@ -181,6 +192,7 @@
 				}
 			},
 			{
+				"f_order":2,
 				"f_icon":"icon-app-bpcoa-project-todo",
 				"f_formenu":true,
 				"f_default":true,
@@ -189,7 +201,6 @@
 					"classpath":"view",
 					"data":"bpcProject.qWaitTask.vList"
 				},
-				"f_order":2,
 				"f_forshortcut":false,
 				"f_name":"mnuWaitTask",
 				"f_caption":"待办任务",
@@ -202,6 +213,7 @@
 				}
 			},
 			{
+				"f_order":7,
 				"f_icon":"icon-app-bpcoa-project-dailytaskcfg",
 				"f_formenu":false,
 				"f_default":false,
@@ -210,7 +222,6 @@
 					"classpath":"view",
 					"data":"bpcProject.qDailyTask.vDailyTask"
 				},
-				"f_order":7,
 				"f_forshortcut":false,
 				"f_name":"mnuDailyTask",
 				"f_caption":"日常任务设置",

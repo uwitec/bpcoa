@@ -456,7 +456,7 @@ Ext.onReady(function(){
 		width : 650,
 		split : true,
 		border : false,
-		layout : 'fit',
+		layout : 'fit'
 	});
 	Ext.apply(worklogPanel.autoLoad.params, 
 			{panelid : worklogPanel.getId(), userid : param_userid, username: param_username, date : param_scoredate});

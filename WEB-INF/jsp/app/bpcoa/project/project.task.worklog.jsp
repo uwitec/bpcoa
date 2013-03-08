@@ -58,7 +58,7 @@ Ext.onReady(function(){
 					format : 'Y-m-d H:i',
 					altFormats : 'Y-m-d H:i:s|m/d/Y|n/j/Y|n/j/y|m/j/y|n/d/y|m/j/Y|n/d/Y|m-d-y|m-d-Y|m/d|m-d|md|mdy|mdY|d|Y-m-d',
 					xtype : 'datetimefield',
-					anchor : '-10',
+					anchor : '-10'
 				}
 			}, {
 				border : false,
@@ -72,7 +72,7 @@ Ext.onReady(function(){
 					increment : 15,
 					xtype : 'timefield',
 					value : '17:00',
-					anchor : '-10',
+					anchor : '-10'
 				}
 			}]
 		}, {

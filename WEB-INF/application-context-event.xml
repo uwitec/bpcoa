@@ -43,6 +43,11 @@
 						<ref bean="WorklogDocumentEventHandler"/>
 					</list>
 				</entry>
+				<entry key="mkNotify.docNotifyViewer">
+					<list>
+						<ref bean="NotifyDocumentEventHandler"/>
+					</list>
+				</entry>
 			</map>
 		</property>
 		<property name="formEventHandlersMap">
@@ -174,6 +179,7 @@
 	<bean id="RegulationsFormEventHandler" class="com.mixky.app.mkoa.regulations.event.RegulationFormEventHandler"/>
 	<bean id="RegulationsDocumentEventHandler" class="com.mixky.app.mkoa.gzzd.event.RegulationsDocumentEventHandler"/>
 	
+	<bean id="NotifyDocumentEventHandler" class="com.mixky.app.mkoa.notify.event.NotifyDocumentEventHandler"/>
 	<bean id="NotifyFormEventHandler" class="com.mixky.app.mkoa.notify.event.NotifyFormEventHandler"/>
 	
 	<bean id="KnowledgeFormEventHandler" class="com.mixky.app.mkoa.knowledge.event.KnowledgeFormEventHandler"/>

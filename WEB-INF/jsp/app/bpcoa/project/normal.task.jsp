@@ -257,7 +257,7 @@ Ext.onReady(function(){
 			url : 'page.do',
 			params : {
 				url : 'app/bpcoa/project/project.task.detail',
-				panelid : detailId,
+				panelid : detailId
 			},
 			scripts : true
 		},
