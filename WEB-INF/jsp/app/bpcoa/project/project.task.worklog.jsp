@@ -20,10 +20,11 @@ Ext.onReady(function(){
 	var worklog = new Ext.Panel({
 		region : 'center',
 		id : worklogId,
-		border : false,
+		border : true,
 		layout : 'fit',
 		autoLoad : {
-			url : 'framework/engine/view/view.do',
+			//url : 'framework/engine/view/view.do',
+			url : 'app/bpcoa/project/view.do',
 			params : {
 				viewkey : 'bpcProject.qWorklog.vList', 
 				panelid : worklogId
@@ -84,7 +85,7 @@ Ext.onReady(function(){
 			height : 50
 		}],
 		buttonAlign : 'center',
-		buttons : [{
+		tbar : [{
 			text : '添加日志',
 			iconCls : 'icon-sys-btnadd',
 			handler : function(){
@@ -135,7 +136,7 @@ Ext.onReady(function(){
 		form.refresh(params);
 		worklog.refresh(params);
 	}
-	
+	//worklog.getTopToolbar().hide();
 	panel.add(view);
 	panel.doLayout();
 });
