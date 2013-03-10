@@ -29,11 +29,12 @@ Ext.onReady(function(){
 			scripts	: true
 		},
 		buttonAlign : 'center',
-		buttons : [{
+		tbar : [{
 			text : '保存',
 			iconCls : 'icon-sys-save',
+			id:'12345',
 			handler : function(){
-				form.saveRecord(panel.panel.refresh);
+				form. (panel.panel.refresh);
 			}
 		}, {
 			text : '启动任务',
@@ -115,24 +116,31 @@ Ext.onReady(function(){
 					switch(data.F_STATE){
 					case '计划': 
 						if(result.isTaskManager || result.isParentTaskManager){
-							form.buttons[1].show();
+							//alert(form.getTopToolbar().size());
+							form.getTopToolbar().get(1).show();
+							//form.buttons[1].show();
 						}
 						break;
 					case '执行': 
 						if(result.isTaskManager || result.isParentTaskManager){
-							form.buttons[0].show();
-							form.buttons[2].show();
+							//form.buttons[0].show();
+							//form.buttons[2].show();
+							form.getTopToolbar().get(0).show();
+							form.getTopToolbar().get(2).show();
 						}
 						break;
 					case '完成': 
 						if(result.isParentTaskManager){
-							form.buttons[3].show();
-							form.buttons[4].show();
+							form.getTopToolbar().get(3).show();
+							form.getTopToolbar().get(4).show();
+							//form.buttons[3].show();
+							//form.buttons[4].show();
 						}
 						break;
 					case '撤销': 
 						if(result.isTaskManager || result.isParentTaskManager){
-							form.buttons[2].show();
+							form.getTopToolbar().get(2).show();
+							//form.buttons[2].show();
 						}
 						break;
 					case '关闭': 
@@ -146,8 +154,9 @@ Ext.onReady(function(){
 	
 	panel.loadTask = function(taskId){
 		// 屏蔽操作
-		for(var i = 0;i<form.buttons.length;i++){
-			form.buttons[i].hide();
+		//form.getTopToolbar().hide();
+		for(var i = 0;i<5;i++){
+			form.getTopToolbar().get(i).hide();
 		}
 		// 装载数据
 		panel.F_TASK_ID = taskId;
