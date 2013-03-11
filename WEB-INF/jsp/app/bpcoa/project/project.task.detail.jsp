@@ -32,9 +32,8 @@ Ext.onReady(function(){
 		tbar : [{
 			text : '保存',
 			iconCls : 'icon-sys-save',
-			id:'12345',
 			handler : function(){
-				form. (panel.panel.refresh);
+				form.saveRecord(panel.panel.refresh);
 			}
 		}, {
 			text : '启动任务',
