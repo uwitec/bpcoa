@@ -6,4 +6,5 @@
 	<bean name="/mkoa/mail/mailfile.download.do" class="com.mixky.app.mkoa.mail.action.MailFileDownloadAction"/>
 	
 	<bean name="/app/bpcoa/project/view.do" class="com.mixky.app.bpcoa.project.action.ProjectWorkLogAction"/>
+
 </beans>
