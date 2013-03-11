@@ -126,7 +126,7 @@
 						{
 							"f_type":1,
 							"f_order":8,
-							"f_width":"100",
+							"f_width":"150",
 							"f_query_type":0,
 							"f_orderable":false,
 							"f_name":"F_SCOREDATE",
@@ -283,7 +283,7 @@
 						{
 							"f_type":1,
 							"f_order":8,
-							"f_width":"100",
+							"f_width":"150",
 							"f_query_type":0,
 							"f_orderable":false,
 							"f_name":"F_SCOREDATE",

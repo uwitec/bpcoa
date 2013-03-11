@@ -14,9 +14,9 @@
 					"data":
 					[
 						{
+							"f_order":1,
 							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n\t\tMixkyApp.desktop.openDocument('mkRegulations.docRegulations', id);\n\t}\n}",
 							"f_default":false,
-							"f_order":1,
 							"f_name":"btnOpen",
 							"f_caption":"查看属性",
 							"f_key":"btnOpen",
@@ -28,9 +28,9 @@
 							}
 						},
 						{
-							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n                var filename = records[0].get('F_FILE_NAME');\n\t\tif(filename=='')\n\t\t\treturn;\nlocation.href='servlet/file.download?tablename=T_MK_APP_REGULATIONS&fieldname=F_FILE&id=' + id + '&filename=' + filename;\n\t}\n}",
-							"f_default":true,
 							"f_order":2,
+							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n                var filename = records[0].get('F_FILE_NAME');\n\t\tif(filename=='')\n\t\t\treturn;\nlocation.href='servlet/file.download?tablename=T_MK_APP_REGULATIONS&fieldname=F_FILE&id=' + id + '&filename=' + filename;\n\t}\n}",
+							"f_default":false,
 							"f_name":"btnDownload",
 							"f_caption":"下载文件",
 							"f_key":"btnDownload",
@@ -42,9 +42,9 @@
 							}
 						},
 						{
-							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n\t\tMixkyApp.desktop.openDocument('mkRegulations.docRegulationsRead', id);\n\t}\n}",
-							"f_default":false,
 							"f_order":1,
+							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n\t\tMixkyApp.desktop.openDocument('mkRegulations.docRegulationsRead', id);\n\t}\n}",
+							"f_default":true,
 							"f_name":"btnRead",
 							"f_caption":"阅读文件",
 							"f_key":"btnRead",
@@ -255,9 +255,9 @@
 					"data":
 					[
 						{
+							"f_order":1,
 							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n                var filename = records[0].get('F_FILE_NAME');\n\t\tif(filename=='')\n\t\t\treturn;\n\t\tlocation.href='servlet/file.download?tablename=T_MK_APP_REGULATIONS&fieldname=F_FILE&id=' + id + '&filename=' + filename;\n\t}\n}",
 							"f_default":true,
-							"f_order":1,
 							"f_name":"btnDownload",
 							"f_caption":"下载",
 							"f_key":"btnDownload",
@@ -269,9 +269,9 @@
 							}
 						},
 						{
+							"f_order":2,
 							"f_handler":"function(){\n\tvar records = grid.getSelectedRecords();\n\tif(records.length > 0){\n\t\tvar id = records[0].get('ID');\n\t\tMixkyApp.desktop.openDocument('mkRegulations.docRegulations', id);\n\t}\n}",
 							"f_default":false,
-							"f_order":2,
 							"f_name":"btnOpen",
 							"f_caption":"查看属性",
 							"f_key":"btnOpen",
@@ -404,14 +404,12 @@
 		"data":
 		[
 			{
-				"f_type":0,
 				"f_items":
 				{
 					"classpath":"group",
 					"data":
 					[
 						{
-							"f_type":1,
 							"f_items":
 							{
 								"classpath":"group",
@@ -432,6 +430,7 @@
 									}
 								]
 							},
+							"f_type":1,
 							"f_name":"gvByIssueMonth",
 							"f_caption":"按时间",
 							"f_key":"gvByIssueMonth",
@@ -443,7 +442,6 @@
 							}
 						},
 						{
-							"f_type":1,
 							"f_items":
 							{
 								"classpath":"group",
@@ -464,6 +462,7 @@
 									}
 								]
 							},
+							"f_type":1,
 							"f_name":"gvByIssueDept",
 							"f_caption":"按部门",
 							"f_key":"gvByIssueDept",
@@ -475,7 +474,6 @@
 							}
 						},
 						{
-							"f_type":1,
 							"f_items":
 							{
 								"classpath":"group",
@@ -501,6 +499,7 @@
 									}
 								]
 							},
+							"f_type":1,
 							"f_name":"gvByTag",
 							"f_caption":"按标签",
 							"f_key":"gvByTag",
@@ -513,6 +512,7 @@
 						}
 					]
 				},
+				"f_type":0,
 				"f_name":"mnuRoot",
 				"f_caption":"浏览规章制度分组",
 				"f_key":"mnuRoot",
