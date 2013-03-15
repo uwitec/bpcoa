@@ -1,6 +1,5 @@
 {
 	"f_type":0,
-	"f_icon":"icon-app-mkoa-knowledge",
 	"f_roles":
 	{
 		"classpath":"modulerole",
@@ -19,6 +18,7 @@
 			}
 		]
 	},
+	"f_icon":"icon-app-mkoa-knowledge",
 	"f_authorities":
 	{
 		"mkKnowledge.mnuTags":
@@ -48,6 +48,7 @@
 		"data":
 		[
 			{
+				"f_order":4,
 				"f_icon":"icon-sys-explorer",
 				"f_formenu":true,
 				"f_default":false,
@@ -61,7 +62,6 @@
 					"classpath":"group",
 					"data":"mkKnowledge.qAllKnowledges.gAllKnowledges"
 				},
-				"f_order":4,
 				"f_forshortcut":false,
 				"f_name":"mnuAllKnowledge",
 				"f_caption":"分类浏览",
@@ -79,6 +79,7 @@
 				}
 			},
 			{
+				"f_order":6,
 				"f_icon":"icon-app-mkoa-tagfolder",
 				"f_formenu":true,
 				"f_default":false,
@@ -92,7 +93,6 @@
 					"classpath":"group",
 					"data":"mkKnowledge.qKnowledgeTag.gKnowledgeTag"
 				},
-				"f_order":6,
 				"f_forshortcut":false,
 				"f_name":"mnuTags",
 				"f_caption":"标签管理",
@@ -109,11 +109,11 @@
 				}
 			},
 			{
+				"f_order":1,
 				"f_icon":"icon-sys-add",
 				"f_handler":"function () {\n\tMixkyApp.desktop.openDocument('mkKnowledge.docKnowledgeDetail', 0, {});\n}",
 				"f_formenu":true,
 				"f_default":false,
-				"f_order":1,
 				"f_forshortcut":true,
 				"f_name":"mnuCreate",
 				"f_caption":"创建知识",
@@ -126,20 +126,13 @@
 				}
 			},
 			{
-				"f_icon":"icon-sys-stat",
-				"f_formenu":true,
-				"f_default":true,
-				"f_i_view":
-				{
-					"classpath":"view",
-					"data":"mkKnowledge.qAllKnowledges.vAllCountKnowledge"
-				},
 				"f_items":
 				{
 					"classpath":"modulemenu",
 					"data":
 					[
 						{
+							"f_order":2,
 							"f_icon":"icon-app-mkoa-knowledgedetail",
 							"f_formenu":true,
 							"f_default":false,
@@ -153,7 +146,6 @@
 								"classpath":"group",
 								"data":"mkKnowledge.qDeskKnowledge.gKnowledge"
 							},
-							"f_order":2,
 							"f_forshortcut":false,
 							"f_name":"mnuHotKnowledge",
 							"f_caption":"关注最多的知识",
@@ -166,6 +158,7 @@
 							}
 						},
 						{
+							"f_order":3,
 							"f_icon":"icon-app-mkoa-knowledgedetail",
 							"f_formenu":true,
 							"f_default":false,
@@ -179,7 +172,6 @@
 								"classpath":"group",
 								"data":"mkKnowledge.qDeskKnowledge.gKnowledge"
 							},
-							"f_order":3,
 							"f_forshortcut":false,
 							"f_name":"mnuHightKnowledge",
 							"f_caption":"评价最高的知识",
@@ -192,6 +184,7 @@
 							}
 						},
 						{
+							"f_order":4,
 							"f_icon":"icon-app-mkoa-knowledgedetail",
 							"f_formenu":true,
 							"f_default":false,
@@ -205,7 +198,6 @@
 								"classpath":"group",
 								"data":"mkKnowledge.qDeskKnowledge.gKnowledge"
 							},
-							"f_order":4,
 							"f_forshortcut":false,
 							"f_name":"mnuCommentKnowledge",
 							"f_caption":"评论最多的知识",
@@ -220,6 +212,14 @@
 					]
 				},
 				"f_order":5,
+				"f_icon":"icon-sys-stat",
+				"f_formenu":true,
+				"f_default":true,
+				"f_i_view":
+				{
+					"classpath":"view",
+					"data":"mkKnowledge.qAllKnowledges.vAllCountKnowledge"
+				},
 				"f_forshortcut":false,
 				"f_name":"mnuKnowledgeCount",
 				"f_caption":"知识统计",
@@ -232,6 +232,7 @@
 				}
 			},
 			{
+				"f_order":5,
 				"f_icon":"icon-app-mkoa-favorite",
 				"f_formenu":false,
 				"f_default":false,
@@ -240,7 +241,6 @@
 					"classpath":"view",
 					"data":"mkFavorite.qFavorites.vFavorites"
 				},
-				"f_order":5,
 				"f_forshortcut":false,
 				"f_name":"mnuFavoriteNamecard",
 				"f_caption":"已标记知识",
@@ -260,6 +260,7 @@
 				}
 			},
 			{
+				"f_order":2,
 				"f_icon":"icon-app-mkoa-knowledgedetail",
 				"f_formenu":true,
 				"f_default":false,
@@ -273,7 +274,6 @@
 					"classpath":"group",
 					"data":"mkKnowledge.qDeskKnowledge.gKnowledge"
 				},
-				"f_order":2,
 				"f_forshortcut":false,
 				"f_name":"mnuNewKnowledge",
 				"f_caption":"最新知识",
@@ -286,6 +286,7 @@
 				}
 			},
 			{
+				"f_order":3,
 				"f_icon":"icon-app-mkoa-knowledgedetail",
 				"f_formenu":true,
 				"f_default":false,
@@ -299,7 +300,6 @@
 					"classpath":"group",
 					"data":"mkKnowledge.qDeskKnowledge.gKnowledge"
 				},
-				"f_order":3,
 				"f_forshortcut":false,
 				"f_name":"mnuTopKnowledge",
 				"f_caption":"推荐知识",
@@ -421,7 +421,8 @@
 		[
 			"mkKnowledge.T_MK_APP_KNOWLEDGE",
 			"mkKnowledge.T_MK_APP_KNOWLEDGE_COMMENT",
-			"mkKnowledge.T_MK_APP_KNOWLEDGE_TAG"
+			"mkKnowledge.T_MK_APP_KNOWLEDGE_TAG",
+			"mkKnowledge.T_MK_KNOWLEDGE_VALUE"
 		]
 	},
 	"f_useflow":false,

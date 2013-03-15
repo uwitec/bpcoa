@@ -34,6 +34,7 @@ Ext.onReady(function(){
 			iconCls : 'icon-sys-save',
 			handler : function(){
 				form.saveRecord(panel.panel.refresh);
+
 			}
 		}, {
 			text : '启动任务',

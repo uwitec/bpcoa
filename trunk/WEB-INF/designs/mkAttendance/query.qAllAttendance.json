@@ -13,9 +13,9 @@
 					"data":
 					[
 						{
+							"f_order":1,
 							"f_handler":"function(){\n\tAttendanceAppDirect.getWorkTime(function(result, event) {\n\t\tvar starttime = result.data.F_TIME_START;\n\t\t\n\t\tvar cell = panel.getSelectedCell();\n\t\tvar username = Mixky.app.UserInfo.name;\n\t\tif(Ext.isDefined(store.baseParams.params) && Ext.isDefined(store.baseParams.params.username) && store.baseParams.params.username != ''){\n\t\t\tusername = store.baseParams.params.username;\n\t\t}\n\t\t\n\t\tif(Ext.isDefined(cell)){\n\t\t\tMixkyApp.desktop.openDocument('mkAttendance.docAttendanceRecord',undefined,{F_USER : username, F_DATE : cell.data.date + ' ' + starttime});\n\t\t}else{\n\t\t\tMixkyApp.desktop.openDocument('mkAttendance.docAttendanceRecord',undefined,{F_USER : username});\n\t\t}\n\t\t\n\t});\n}",
 							"f_default":false,
-							"f_order":1,
 							"f_name":"btnAdd",
 							"f_caption":"考勤登记",
 							"f_key":"btnAdd",
@@ -27,9 +27,9 @@
 							}
 						},
 						{
+							"f_order":3,
 							"f_handler":"{\n        file_types: '*.xls;*.xlsx',\n\tupload_url : 'servlet/app/attendance.import',\n\tpost_params : {\n\t\tcolumNumber: 10,\n\t\tuserkey: Mixky.app.UserInfo.login\n\t},\n\tlisteners : {\n\t\t'allUploadsComplete' : function(){\n\t\t\tpanel.refresh();\n\t\t}\n\t}\n}",
 							"f_default":false,
-							"f_order":3,
 							"f_name":"btnImport",
 							"f_caption":"导入记录",
 							"f_key":"btnImport",
@@ -45,10 +45,10 @@
 							}
 						},
 						{
+							"f_order":2,
 							"f_icon":"icon-sys-download",
 							"f_handler":"function() {\n\tlocation.href='resources/excelmodel/attendance.xls';\n}",
 							"f_default":false,
-							"f_order":2,
 							"f_name":"btnDownloadModel",
 							"f_caption":"下载模板",
 							"f_key":"btnDownloadModel",
@@ -256,10 +256,10 @@
 					"data":
 					[
 						{
-							"f_icon":"icon-app-mkoa-workday",
-							"f_handler":"function(){\n\tvar cell = panel.getSelectedCell();\n\tif(cell && cell.data){\n\t\tAttendanceAppDirect.setWorkDay(cell.data.date, 1, function(result, e){\n\t\t\tif(result && result.success){\n\t\t\t\tcell.data.dayType = 1;\n\t\t\t\tcell.record.set(cell.fieldname, cell.data);\n\t\t\t\tcell.record.commit();\n\t\t\t}else{\n\t\t\t\tMixkyApp.showErrorMessage('设置[' + data.date + ']为工作日失败');\n\t\t\t}\n\t\t});\n\t}\n}",
-							"f_default":false,
 							"f_order":2,
+							"f_icon":"icon-app-mkoa-workday",
+							"f_handler":"function(){\n\tvar cell = panel.getSelectedCell();\n\tif(cell && cell.data){\n\t\tAttendanceAppDirect.setWorkDay(cell.data.date, 0, function(result, e){\n\t\t\tif(result && result.success){\n\t\t\t\tcell.data.dayType = 0;\n\t\t\t\tcell.record.set(cell.fieldname, cell.data);\n\t\t\t\tcell.record.commit();\n\t\t\t}else{\n\t\t\t\tMixkyApp.showErrorMessage('设置[' + data.date + ']为休息日失败');\n\t\t\t}\n\t\t});\n\t}\n}",
+							"f_default":false,
 							"f_name":"btnSetWorkday",
 							"f_caption":"设为工作日",
 							"f_key":"btnSetWorkday",
@@ -271,10 +271,10 @@
 							}
 						},
 						{
-							"f_icon":"icon-app-mkoa-restday",
-							"f_handler":"function(){\n\tvar cell = panel.getSelectedCell();\n\tif(cell && cell.data){\n\t\tAttendanceAppDirect.setWorkDay(cell.data.date, 0, function(result, e){\n\t\t\tif(result && result.success){\n\t\t\t\tcell.data.dayType = 0;\n\t\t\t\tcell.record.set(cell.fieldname, cell.data);\n\t\t\t\tcell.record.commit();\n\t\t\t}else{\n\t\t\t\tMixkyApp.showErrorMessage('设置[' + data.date + ']为休息日失败');\n\t\t\t}\n\t\t});\n\t}\n}",
-							"f_default":false,
 							"f_order":3,
+							"f_icon":"icon-app-mkoa-restday",
+							"f_handler":"function(){\n\tvar cell = panel.getSelectedCell();\n\tif(cell && cell.data){\n\t\tAttendanceAppDirect.setWorkDay(cell.data.date, 1, function(result, e){\n\t\t\tif(result && result.success){\n\t\t\t\tcell.data.dayType = 1;\n\t\t\t\tcell.record.set(cell.fieldname, cell.data);\n\t\t\t\tcell.record.commit();\n\t\t\t}else{\n\t\t\t\tMixkyApp.showErrorMessage('设置[' + data.date + ']为工作日失败');\n\t\t\t}\n\t\t});\n\t}\n}",
+							"f_default":false,
 							"f_name":"btnSetRestday",
 							"f_caption":"设为休息日",
 							"f_key":"btnSetRestday",
@@ -286,10 +286,10 @@
 							}
 						},
 						{
+							"f_order":1,
 							"f_icon":"icon-app-mkoa-autoday",
 							"f_handler":"function(){\n\tExt.MessageBox.confirm('操作提示', '初始化本月工作日设定，覆盖原有设定，您确定吗？', function(btn){\n\t\tif(btn == 'yes'){\n\t\t\tAttendanceAppDirect.initWorkDay(store.baseParams.day, true, function(result, e){\n\t\t\t\tif(result && result.success){\n\t\t\t\t\tstore.reload();\n\t\t\t\t}else{\n\t\t\t\t\tMixkyApp.showErrorMessage('初始化失败');\n\t\t\t\t}\n\t\t\t})\n\t\t}\n\t});\n}",
 							"f_default":false,
-							"f_order":1,
 							"f_name":"btnInit",
 							"f_caption":"初始化工作日",
 							"f_key":"btnInit",

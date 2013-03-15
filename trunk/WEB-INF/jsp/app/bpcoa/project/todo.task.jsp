@@ -17,7 +17,7 @@
 	List<Column> columns = AuthorityManager.instance().getDesignObjectsByUser(view.getF_columns(), user);
 	JsonObject cfg = view.getF_config();
 	// 支持自定义数据
-	String directFn = "ViewAppDirect.getViewList";
+	String directFn = "BpcProjectAppDirect.getToDoTask";
 	if(cfg != null && cfg.has("directFn")){
 		directFn = cfg.get("directFn").getAsString();
 	}
@@ -324,7 +324,6 @@ Ext.onReady(function(){
 	var view = new Ext.Panel({
 		disabled : false,
 		layout : 'border',
-		title : '待办任务',
 		border : false,
 		items : [grid, detail]
 	});

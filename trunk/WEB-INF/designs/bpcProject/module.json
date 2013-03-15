@@ -157,7 +157,7 @@
 				"f_i_group":
 				{
 					"classpath":"group",
-					"data":"bpcProject.qAllProject.gByProject"
+					"data":"bpcProject.qAllProject.gByRoot"
 				},
 				"f_forshortcut":false,
 				"f_name":"mnuProjectTask",

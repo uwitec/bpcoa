@@ -250,6 +250,18 @@
 								"classpath":"view",
 								"data":"bpcProject.qAllProject.vList"
 							}
+						},
+						{
+							"f_sql":"F_TYPE = '|value|'",
+							"f_name":"F_TYPE",
+							"f_caption":"vpType",
+							"f_key":"vpType",
+							"f_class":"viewparameter",
+							"f_i_parent":
+							{
+								"classpath":"view",
+								"data":"bpcProject.qAllProject.vList"
+							}
 						}
 					]
 				},
@@ -309,6 +321,27 @@
 		"data":
 		[
 			{
+				"f_items":
+				{
+					"classpath":"group",
+					"data":
+					[
+						{
+							"f_type":2,
+							"f_field":"F_TYPE",
+							"f_valuefield":"",
+							"f_name":"F_TYPE",
+							"f_caption":"按分类",
+							"f_key":"gByType",
+							"f_class":"group",
+							"f_i_parent":
+							{
+								"classpath":"group",
+								"data":"bpcProject.qAllProject.byYear"
+							}
+						}
+					]
+				},
 				"f_type":2,
 				"f_field":"F_YEAR",
 				"f_name":"F_YEAR",
@@ -328,6 +361,79 @@
 				"f_name":"F_PROJECT_ID",
 				"f_caption":"gByProject",
 				"f_key":"gByProject",
+				"f_class":"group",
+				"f_i_parent":
+				{
+					"classpath":"query",
+					"data":"bpcProject.qAllProject"
+				}
+			},
+			{
+				"f_items":
+				{
+					"classpath":"group",
+					"data":
+					[
+						{
+							"f_items":
+							{
+								"classpath":"group",
+								"data":
+								[
+									{
+										"f_items":
+										{
+											"classpath":"group",
+											"data":
+											[
+												{
+													"f_type":2,
+													"f_field":"F_TITLE",
+													"f_valuefield":"ID",
+													"f_name":"F_PROJECT_ID",
+													"f_caption":"gByProject",
+													"f_key":"gByProject",
+													"f_class":"group",
+													"f_i_parent":
+													{
+														"classpath":"group",
+														"data":"bpcProject.qAllProject.gByRoot.gByType.gByYear"
+													}
+												}
+											]
+										},
+										"f_type":2,
+										"f_field":"F_YEAR",
+										"f_name":"F_YEAR",
+										"f_caption":"gByYear",
+										"f_key":"gByYear",
+										"f_class":"group",
+										"f_i_parent":
+										{
+											"classpath":"group",
+											"data":"bpcProject.qAllProject.gByRoot.gByType"
+										}
+									}
+								]
+							},
+							"f_type":2,
+							"f_field":"F_TYPE",
+							"f_name":"F_TYPE",
+							"f_caption":"gByType",
+							"f_key":"gByType",
+							"f_class":"group",
+							"f_i_parent":
+							{
+								"classpath":"group",
+								"data":"bpcProject.qAllProject.gByRoot"
+							}
+						}
+					]
+				},
+				"f_type":0,
+				"f_name":"gByRoot",
+				"f_caption":"gByRoot",
+				"f_key":"gByRoot",
 				"f_class":"group",
 				"f_i_parent":
 				{

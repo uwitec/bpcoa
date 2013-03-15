@@ -45,7 +45,10 @@ Ext.onReady(function(){
 	{"id":"F_START_TIME","dataIndex":"F_START_TIME","header":"开始时间","sortable":false, "width":130},
 	{"id":"F_END_TIME","dataIndex":"F_END_TIME","header":"结束时间","sortable":false, "width":130},
 	{"id":"F_WORKLOAD","dataIndex":"F_WORKLOAD","header":"工作量","sortable":false, "width":50},
-	{"id":"F_NOTE","dataIndex":"F_NOTE","header":"内容","sortable":false}];
+	{"id":"F_NOTE","dataIndex":"F_NOTE","header":"内容","sortable":false,renderer : function(value, metadata, record , rowIndex, colIndex, store){
+		metadata.attr = "style='white-space:normal;overflow:visible;'";
+		return value;
+	}}];
 	
 	// 显示标题
 	var lbl_username =  new Ext.form.Label({
@@ -92,7 +95,7 @@ Ext.onReady(function(){
 			return this.getSelectionModel().getSelections();
 		}
 	});
-	
+	/**
 	// 列表行提示信息
 	grid.on('render',function (grid){
 		var store=grid.getStore();
@@ -123,6 +126,7 @@ Ext.onReady(function(){
 			}
 		});
 	});
+	**/
 	////
 	function getSelectedRecords(){
 		return grid.getSelectedRecords();

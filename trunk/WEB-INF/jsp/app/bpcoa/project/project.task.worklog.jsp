@@ -38,6 +38,7 @@ Ext.onReady(function(){
 		height : 130,
 		border : false,
 		labelWidth : 50,
+		split : true,
 		padding : 5,
 		items : [{
 			xtype : 'hidden',

@@ -65,7 +65,7 @@
 							}
 						},
 						{
-							"f_type":1,
+							"f_type":0,
 							"f_order":4,
 							"f_width":"60",
 							"f_asname":"F_MANAGER_NAME",
