@@ -44,7 +44,7 @@ Ext.ux.tree.TreeGridSorter = Ext.extend(Ext.tree.TreeSorter, {
         if(!Ext.isObject(config)) {
             config = {
                 property: tree.columns[0].dataIndex || 'text',
-                folderSort: true
+                folderSort: false
             }
         }
 
