@@ -169,7 +169,10 @@ Ext.onReady(function(){
     	text : '刷新',
     	iconCls : 'icon-sys-refresh',
     	handler : function(){
+    		//var node = tree.getSelectionModel().getSelectedNode();
     		panel.refresh();
+			//Ext.apply(tree.getLoader().baseParams, {'viewtype':typeCombo.getValue()});
+			//tree.refresh(node);
     	}
     });
 
@@ -232,6 +235,15 @@ Ext.onReady(function(){
 			dataIndex: 'F_END_DATE',
 			width: 70
 		}],
+		refresh : function(node){
+			if(!node){
+				node = this.getSelectionModel().getSelectedNode();
+			}
+			if(!node || node.isLeaf()){
+				return;
+			}
+			node.reload();
+		},
         loader: new Ext.tree.TreeLoader({
             directFn : BpcProjectAppDirect.loadProjectTaskTree,
         	paramOrder : ['F_PROJECT_ID', 'taskId', 'userId', 'stateFlag'],
@@ -241,6 +253,7 @@ Ext.onReady(function(){
         			var taskId = 0;
         			if(node.attributes.key){
         				taskId = node.attributes.key;
+        				
         			}
         			var params = {
         				userId : cboUser.getValue(), 
@@ -315,7 +328,6 @@ Ext.onReady(function(){
 	var view = new Ext.Panel({
 		disabled : true,
 		layout : 'border',
-		title : '任务进度管理',
 		border : false,
 		items : [tree, detail]
 	});
@@ -342,16 +354,39 @@ Ext.onReady(function(){
 		}
 	})
 	
-	panel.refresh = function(params){
+	panel.refreshNode = function(){
+		
+		var node = tree.getSelectionModel().getSelectedNode();
+		//alert(node.getDepth());
+		if(!node){
+			tree.getRootNode().reload();
+		}
+		
+		node.parentNode.select();
+		node.select();
+		node.parentNode.reload();
+	
+	}
+	
+	panel.refresh = function(params,node){
 		// 设置查询参数
 		var projectId = 0;
 		if(params && params.F_PROJECT_ID && params.F_PROJECT_ID != null){
 			panel.F_PROJECT_ID = params.F_PROJECT_ID;
 		}
+		//alert(params.F_PROJECT_ID);
 		// 装载数据
-		tree.getRootNode().reload();
+		var node = tree.getSelectionModel().getSelectedNode();
+		//alert(node);
+		if(!node){
+			tree.getRootNode().reload();
+		}else{
+			//alert(node.getDepth());
+			//node.getOwnerTree().getRootNode().reload();
+			node.parentNode.reload();
+		}
 		detail.loadTask(0);
-		view.disable();
+		//view.disable();
 	}
 
 	panel.F_PROJECT_ID = 0;

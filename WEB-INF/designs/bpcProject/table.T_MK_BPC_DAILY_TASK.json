@@ -5,9 +5,9 @@
 		"data":
 		[
 			{
+				"f_order":1,
 				"f_inputtype":0,
 				"f_datatype_db":2,
-				"f_order":1,
 				"f_allowblank":false,
 				"f_length":10,
 				"f_datatype_java":2,
@@ -26,9 +26,9 @@
 				}
 			},
 			{
+				"f_order":2,
 				"f_inputtype":1,
 				"f_datatype_db":1,
-				"f_order":2,
 				"f_allowblank":false,
 				"f_length":50,
 				"f_datatype_java":1,
@@ -47,9 +47,9 @@
 				}
 			},
 			{
+				"f_order":3,
 				"f_inputtype":2,
 				"f_datatype_db":1,
-				"f_order":3,
 				"f_allowblank":true,
 				"f_length":500,
 				"f_datatype_java":1,
@@ -68,9 +68,9 @@
 				}
 			},
 			{
+				"f_order":4,
 				"f_inputtype":4,
 				"f_datatype_db":2,
-				"f_order":4,
 				"f_allowblank":true,
 				"f_length":10,
 				"f_datatype_java":2,
@@ -90,9 +90,9 @@
 				}
 			},
 			{
+				"f_order":5,
 				"f_inputtype":0,
 				"f_datatype_db":2,
-				"f_order":5,
 				"f_allowblank":true,
 				"f_length":10,
 				"f_datatype_java":2,
@@ -111,9 +111,9 @@
 				}
 			},
 			{
+				"f_order":7,
 				"f_inputtype":9,
 				"f_datatype_db":1,
-				"f_order":7,
 				"f_allowblank":false,
 				"f_length":50,
 				"f_datatype_java":1,
@@ -137,9 +137,9 @@
 				}
 			},
 			{
+				"f_order":7,
 				"f_inputtype":9,
 				"f_datatype_db":1,
-				"f_order":7,
 				"f_allowblank":false,
 				"f_length":10,
 				"f_datatype_java":1,
@@ -163,9 +163,9 @@
 				}
 			},
 			{
+				"f_order":8,
 				"f_inputtype":4,
 				"f_datatype_db":2,
-				"f_order":8,
 				"f_allowblank":false,
 				"f_length":10,
 				"f_datatype_java":2,
@@ -184,9 +184,9 @@
 				}
 			},
 			{
+				"f_order":9,
 				"f_inputtype":16,
 				"f_datatype_db":6,
-				"f_order":9,
 				"f_allowblank":false,
 				"f_length":0,
 				"f_datatype_java":1,
@@ -207,9 +207,9 @@
 				}
 			},
 			{
+				"f_order":9,
 				"f_inputtype":16,
 				"f_datatype_db":6,
-				"f_order":9,
 				"f_allowblank":true,
 				"f_length":0,
 				"f_datatype_java":1,
@@ -232,9 +232,9 @@
 				}
 			},
 			{
+				"f_order":10,
 				"f_inputtype":0,
 				"f_datatype_db":6,
-				"f_order":10,
 				"f_allowblank":true,
 				"f_length":0,
 				"f_datatype_java":1,
@@ -255,9 +255,9 @@
 				}
 			},
 			{
+				"f_order":11,
 				"f_inputtype":0,
 				"f_datatype_db":1,
-				"f_order":11,
 				"f_allowblank":true,
 				"f_length":50,
 				"f_datatype_java":1,
@@ -277,9 +277,9 @@
 				}
 			},
 			{
+				"f_order":13,
 				"f_inputtype":0,
 				"f_datatype_db":4,
-				"f_order":13,
 				"f_allowblank":true,
 				"f_length":0,
 				"f_datatype_java":4,
@@ -291,6 +291,69 @@
 				"f_name":"F_UPDATE_TIME",
 				"f_caption":"F_UPDATE_TIME",
 				"f_key":"F_UPDATE_TIME",
+				"f_class":"field",
+				"f_i_parent":
+				{
+					"classpath":"table",
+					"data":"bpcProject.T_MK_BPC_DAILY_TASK"
+				}
+			},
+			{
+				"f_order":13,
+				"f_inputtype":4,
+				"f_datatype_db":5,
+				"f_allowblank":false,
+				"f_length":10,
+				"f_datatype_java":5,
+				"f_width":0,
+				"f_height":0,
+				"f_top":0,
+				"f_left":0,
+				"f_name":"F_WEIGHT",
+				"f_caption":"权重",
+				"f_key":"F_WEIGHT",
+				"f_class":"field",
+				"f_i_parent":
+				{
+					"classpath":"table",
+					"data":"bpcProject.T_MK_BPC_DAILY_TASK"
+				}
+			},
+			{
+				"f_order":14,
+				"f_inputtype":1,
+				"f_datatype_db":1,
+				"f_allowblank":false,
+				"f_length":512,
+				"f_datatype_java":1,
+				"f_width":0,
+				"f_height":0,
+				"f_top":0,
+				"f_left":0,
+				"f_name":"F_DATA1",
+				"f_caption":"数据1",
+				"f_key":"F_DATA1",
+				"f_class":"field",
+				"f_i_parent":
+				{
+					"classpath":"table",
+					"data":"bpcProject.T_MK_BPC_DAILY_TASK"
+				}
+			},
+			{
+				"f_order":15,
+				"f_inputtype":1,
+				"f_datatype_db":1,
+				"f_allowblank":false,
+				"f_length":512,
+				"f_datatype_java":1,
+				"f_width":0,
+				"f_height":0,
+				"f_top":0,
+				"f_left":0,
+				"f_name":"F_DATA2",
+				"f_caption":"数据2",
+				"f_key":"F_DATA2",
 				"f_class":"field",
 				"f_i_parent":
 				{
@@ -357,7 +420,19 @@
 					{
 						"mode":"0010"
 					},
+					"F_WEIGHT":
+					{
+						"mode":"0010"
+					},
 					"F_UPDATE_TIME":
+					{
+						"mode":"0010"
+					},
+					"F_DATA1":
+					{
+						"mode":"0010"
+					},
+					"F_DATA2":
 					{
 						"mode":"0010"
 					}

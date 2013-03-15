@@ -171,7 +171,7 @@ Ext.onReady(function(){
 							'<tbody>',
 								'<tr>',
 									'<td>',
-										'<div class="x-forum-thread-header-info"><b>&nbsp;#{F_POSITION}</b>&nbsp;&nbsp;{F_CREATOR_NAME}({F_CREATED})</div>',
+										'<div class="x-forum-thread-header-info"><b>&nbsp;# {F_POSITION}</b>&nbsp;&nbsp;{F_CREATOR_NAME}({F_CREATED})</div>',
 									'</td>',
 									'<td class="x-forum-thread-header-tool">', 
 									'</td>',

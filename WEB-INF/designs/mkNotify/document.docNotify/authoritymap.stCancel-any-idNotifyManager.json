@@ -2,6 +2,7 @@
 	"f_state":"stCancel",
 	"f_authorities":
 	{
+		"mkNotify.docNotify.btnDelete":"0010",
 		"mkNotify.docNotify.btnIssue":"0010",
 		"mkNotify.docNotify.pContent":"0010",
 		"mkNotify.T_MK_APP_NOTIFY.F_TITLE":"0010",

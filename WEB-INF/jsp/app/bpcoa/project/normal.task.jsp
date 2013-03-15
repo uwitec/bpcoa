@@ -267,7 +267,6 @@ Ext.onReady(function(){
 	var view = new Ext.Panel({
 		disabled : true,
 		layout : 'border',
-		title : '任务进度管理',
 		border : false,
 		items : [tree, detail]
 	});
