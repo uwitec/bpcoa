@@ -263,6 +263,16 @@
 		<url-pattern>/servlet/app/attendance.import</url-pattern>
 	</servlet-mapping>
 	
+	
+	<servlet>
+		<servlet-name>AttendanceMixkyImport</servlet-name>
+		<servlet-class>com.mixky.app.mkoa.attendance.MixkyAttendanceImport</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AttendanceMixkyImport</servlet-name>
+		<url-pattern>/servlet/app/attendance.mixky.import</url-pattern>
+	</servlet-mapping>
+	
 	<servlet>
 		<servlet-name>ScoreMonthExport</servlet-name>
 		<servlet-class>com.mixky.app.bpc.score.ScoreMonthExport</servlet-class>
