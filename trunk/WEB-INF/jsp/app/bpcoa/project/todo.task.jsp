@@ -281,6 +281,11 @@ Ext.onReady(function(){
 	// 视图刷新
 	panel.refresh = function(params){
 		store.reload();
+		var record = grid.getSelectionModel().getSelected();
+		if (record){
+			var taskId = parseInt(record.get('ID'));
+			detail.loadTask(taskId);
+		}
 	}	
 
 	// 输出附加脚本 begin

@@ -169,10 +169,7 @@ Ext.onReady(function(){
     	text : '刷新',
     	iconCls : 'icon-sys-refresh',
     	handler : function(){
-    		//var node = tree.getSelectionModel().getSelectedNode();
     		panel.refresh();
-			//Ext.apply(tree.getLoader().baseParams, {'viewtype':typeCombo.getValue()});
-			//tree.refresh(node);
     	}
     });
 
@@ -253,7 +250,6 @@ Ext.onReady(function(){
         			var taskId = 0;
         			if(node.attributes.key){
         				taskId = node.attributes.key;
-        				
         			}
         			var params = {
         				userId : cboUser.getValue(), 
@@ -357,7 +353,6 @@ Ext.onReady(function(){
 	panel.refreshNode = function(){
 		
 		var node = tree.getSelectionModel().getSelectedNode();
-		//alert(node.getDepth());
 		if(!node){
 			tree.getRootNode().reload();
 		}
@@ -374,19 +369,19 @@ Ext.onReady(function(){
 		if(params && params.F_PROJECT_ID && params.F_PROJECT_ID != null){
 			panel.F_PROJECT_ID = params.F_PROJECT_ID;
 		}
-		//alert(params.F_PROJECT_ID);
 		// 装载数据
 		var node = tree.getSelectionModel().getSelectedNode();
-		//alert(node);
 		if(!node){
 			tree.getRootNode().reload();
 		}else{
-			//alert(node.getDepth());
-			//node.getOwnerTree().getRootNode().reload();
-			node.parentNode.reload();
+			tree.getRootNode().reload();
+			//tree.getNodeById(node.attributes.id).select();
 		}
-		detail.loadTask(0);
-		//view.disable();
+		detail.loadTask(node.attributes.key);
+		if(node){
+			
+			tree.getNodeById(node.attributes.id).select();
+		}
 	}
 
 	panel.F_PROJECT_ID = 0;

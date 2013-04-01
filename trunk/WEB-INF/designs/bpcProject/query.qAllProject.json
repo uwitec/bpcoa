@@ -375,8 +375,7 @@
 					"data":
 					[
 						{
-							"f_items":
-							{
+
 								"classpath":"group",
 								"data":
 								[
@@ -397,7 +396,7 @@
 													"f_i_parent":
 													{
 														"classpath":"group",
-														"data":"bpcProject.qAllProject.gByRoot.gByType.gByYear"
+														"data":"bpcProject.qAllProject.gByRoot.gByYear"
 													}
 												}
 											]
@@ -411,22 +410,11 @@
 										"f_i_parent":
 										{
 											"classpath":"group",
-											"data":"bpcProject.qAllProject.gByRoot.gByType"
+											"data":"bpcProject.qAllProject.gByRoot"
 										}
 									}
 								]
-							},
-							"f_type":2,
-							"f_field":"F_TYPE",
-							"f_name":"F_TYPE",
-							"f_caption":"gByType",
-							"f_key":"gByType",
-							"f_class":"group",
-							"f_i_parent":
-							{
-								"classpath":"group",
-								"data":"bpcProject.qAllProject.gByRoot"
-							}
+							
 						}
 					]
 				},
