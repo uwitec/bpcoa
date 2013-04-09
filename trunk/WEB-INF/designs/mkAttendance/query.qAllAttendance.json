@@ -58,6 +58,24 @@
 								"classpath":"view",
 								"data":"mkAttendance.qAllAttendance.vAllAttendances"
 							}
+						},
+						{
+							"f_order":3,
+							"f_handler":"{\n        file_types: '*.xls;*.xlsx',\n\tupload_url : 'servlet/app/attendance.mixky.import',\n\tpost_params : {\n\t\tcolumNumber: 17,\n\t\tuserkey: Mixky.app.UserInfo.login\n\t},\n\tlisteners : {\n\t\t'allUploadsComplete' : function(){\n\t\t\tpanel.refresh();\n\t\t}\n\t}\n}",
+							"f_default":false,
+							"f_name":"btnImportMixky",
+							"f_caption":"导入记录a创想",
+							"f_key":"btnImportMixky",
+							"f_config":
+							{
+								"xtype":"mixkyuploadbutton"
+							},
+							"f_class":"action",
+							"f_i_parent":
+							{
+								"classpath":"view",
+								"data":"mkAttendance.qAllAttendance.vAllAttendances"
+							}
 						}
 					]
 				},

@@ -7,8 +7,8 @@
 		[
 			{
 				"f_type":0,
-				"f_icon":"icon-sys-baseinfo",
 				"f_order":1,
+				"f_icon":"icon-sys-baseinfo",
 				"f_i_tableform":
 				{
 					"classpath":"tableform",
@@ -26,9 +26,9 @@
 			},
 			{
 				"f_type":99,
+				"f_order":3,
 				"f_icon":"icon-app-mkoa-folders",
 				"f_url":"app/bpcoa/project/panel.folder.project",
-				"f_order":3,
 				"f_name":"pFolder",
 				"f_caption":"项目资料",
 				"f_key":"pFolder",
@@ -41,12 +41,26 @@
 			},
 			{
 				"f_type":99,
+				"f_order":4,
 				"f_icon":"icon-app-mkoa-addressbook",
 				"f_url":"app/bpcoa/project/panel.addressbook.project",
-				"f_order":4,
 				"f_name":"pAddressBook",
 				"f_caption":"联系人",
 				"f_key":"pAddressBook",
+				"f_class":"panel",
+				"f_i_parent":
+				{
+					"classpath":"document",
+					"data":"bpcProject.docProject"
+				}
+			},
+			{
+				"f_type":99,
+				"f_order":4,
+				"f_url":"/app/bpcoa/project/panel.worklog.report",
+				"f_name":"pWorklogReport",
+				"f_caption":"工作量统计",
+				"f_key":"pWorklogReport",
 				"f_class":"panel",
 				"f_i_parent":
 				{
@@ -62,9 +76,9 @@
 		"data":
 		[
 			{
+				"f_order":1,
 				"f_handler":"function(){\n\tthis.document.deleteDocument();\n}",
 				"f_default":false,
-				"f_order":1,
 				"f_name":"btnDelete",
 				"f_caption":"删除",
 				"f_key":"btnDelete",
@@ -76,9 +90,9 @@
 				}
 			},
 			{
+				"f_order":2,
 				"f_handler":"function(){\n\tthis.document.submitDocument();\n}",
 				"f_default":false,
-				"f_order":2,
 				"f_name":"btnSave",
 				"f_caption":"保存",
 				"f_key":"btnSave",
@@ -90,9 +104,9 @@
 				}
 			},
 			{
+				"f_order":3,
 				"f_handler":"function(){\n\tthis.document.confirmDocument();\n}",
 				"f_default":false,
-				"f_order":3,
 				"f_name":"btnConfirm",
 				"f_caption":"确定",
 				"f_key":"btnConfirm",

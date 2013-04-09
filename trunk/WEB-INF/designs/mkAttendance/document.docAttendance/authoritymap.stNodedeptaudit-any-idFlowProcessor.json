@@ -2,8 +2,7 @@
 	"f_state":"stNodedeptaudit",
 	"f_authorities":
 	{
-		"mkAttendance.T_MK_APP_ATTENDANCE.F_NOTE":"0010",
-		"mkAttendance.T_MK_APP_ATTENDANCE.F_DEPT_OPINION":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_MANAGER_OPINION":"0010",
 		"mkAttendance.T_MK_APP_ATTENDANCE.F_RESULT":"0010"
 	},
 	"f_identity":"idFlowProcessor",
