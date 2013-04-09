@@ -292,7 +292,7 @@ Ext.onReady(function(){
 			node.reload();
 		},
         loader: new Ext.tree.TreeLoader({
-            directFn : BpcProjectAppDirect.loadProjectTaskTree,
+            directFn : BpcProjectAppDirect.loadProjectFocusTaskTree,
         	paramOrder : ['F_PROJECT_ID', 'taskId', 'userId', 'stateFlag'],
         	baseParams : {F_PROJECT_ID : 0, userId : 0, stateFlag : 0, taskId:0},
         	listeners : {
@@ -300,7 +300,6 @@ Ext.onReady(function(){
         			var taskId = 0;
         			if(node.attributes.key){
         				taskId = node.attributes.key;
-        				
         			}
         			var params = {
         				userId : cboUser.getValue(), 
@@ -373,7 +372,7 @@ Ext.onReady(function(){
 	});
 	
 	var view = new Ext.Panel({
-		disabled : true,
+		disabled : false,
 		layout : 'border',
 		border : false,
 		items : [tree, detail]

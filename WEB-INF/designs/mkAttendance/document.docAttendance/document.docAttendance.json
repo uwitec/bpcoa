@@ -7,11 +7,9 @@
 		[
 			"mkAttendance.docAttendance.any-any-any",
 			"mkAttendance.docAttendance.any-any-idFlowProcessor",
-			"mkAttendance.docAttendance.stNew-any-any",
-			"mkAttendance.docAttendance.stNode1-any-idFlowProcessor",
 			"mkAttendance.docAttendance.stNodedeptaudit-any-idFlowProcessor",
-			"mkAttendance.docAttendance.stNodedraft-any-idFlowProcessor",
-			"mkAttendance.docAttendance.stNodemanageraudit-any-idFlowProcessor"
+			"mkAttendance.docAttendance.stNodedraft-any-any",
+			"mkAttendance.docAttendance.stNodeleaderaudit-any-idFlowProcessor"
 		]
 	},
 	"f_panels":
@@ -21,8 +19,8 @@
 		[
 			{
 				"f_type":0,
-				"f_icon":"icon-sys-info",
 				"f_order":1,
+				"f_icon":"icon-sys-info",
 				"f_i_tableform":
 				{
 					"classpath":"tableform",
@@ -40,9 +38,9 @@
 			},
 			{
 				"f_type":99,
+				"f_order":2,
 				"f_icon":"icon-sys-flow-flow",
 				"f_url":"framework/engine/workflow/flow.instance.viewer",
-				"f_order":2,
 				"f_name":"pFlowView",
 				"f_caption":"审批流程",
 				"f_key":"pFlowView",
@@ -55,8 +53,8 @@
 			},
 			{
 				"f_type":99,
-				"f_url":"framework/engine/panels/panel.authview",
 				"f_order":3,
+				"f_url":"framework/engine/panels/panel.authview",
 				"f_name":"pDebug",
 				"f_caption":"调试标签",
 				"f_key":"pDebug",
@@ -75,9 +73,9 @@
 		"data":
 		[
 			{
+				"f_order":1,
 				"f_handler":"function(){\n\tthis.document.deleteDocument();\n}",
 				"f_default":false,
-				"f_order":1,
 				"f_name":"btnDelete",
 				"f_caption":"删除",
 				"f_key":"btnDelete",
@@ -89,9 +87,9 @@
 				}
 			},
 			{
+				"f_order":2,
 				"f_handler":"function(){\n\tthis.document.submitDocument();\n}",
 				"f_default":false,
-				"f_order":2,
 				"f_name":"btnSave",
 				"f_caption":"保存",
 				"f_key":"btnSave",
@@ -103,9 +101,9 @@
 				}
 			},
 			{
+				"f_order":3,
 				"f_handler":"function(){\n\tthis.document.confirmDocument();\n}",
 				"f_default":false,
-				"f_order":3,
 				"f_name":"btnConfirm",
 				"f_caption":"确定",
 				"f_key":"btnConfirm",
@@ -135,30 +133,6 @@
 		[
 			{
 				"f_operator":0,
-				"f_name":"stNew",
-				"f_caption":"新建",
-				"f_key":"stNew",
-				"f_class":"state",
-				"f_i_parent":
-				{
-					"classpath":"document",
-					"data":"mkAttendance.docAttendance"
-				}
-			},
-			{
-				"f_operator":0,
-				"f_name":"stDone",
-				"f_caption":"结束",
-				"f_key":"stDone",
-				"f_class":"state",
-				"f_i_parent":
-				{
-					"classpath":"document",
-					"data":"mkAttendance.docAttendance"
-				}
-			},
-			{
-				"f_operator":0,
 				"f_name":"stNodedraft",
 				"f_caption":"起草",
 				"f_key":"stNodedraft",
@@ -172,7 +146,7 @@
 			{
 				"f_operator":0,
 				"f_name":"stNodedeptaudit",
-				"f_caption":"部门主管审批",
+				"f_caption":"部门经理审批",
 				"f_key":"stNodedeptaudit",
 				"f_class":"state",
 				"f_i_parent":
@@ -183,21 +157,9 @@
 			},
 			{
 				"f_operator":0,
-				"f_name":"stNodemanageraudit",
-				"f_caption":"副总经理审批",
-				"f_key":"stNodemanageraudit",
-				"f_class":"state",
-				"f_i_parent":
-				{
-					"classpath":"document",
-					"data":"mkAttendance.docAttendance"
-				}
-			},
-			{
-				"f_operator":0,
-				"f_name":"stNode1",
-				"f_caption":"总经理审批",
-				"f_key":"stNode1",
+				"f_name":"stNodeleaderaudit",
+				"f_caption":"企业领导审批",
+				"f_key":"stNodeleaderaudit",
 				"f_class":"state",
 				"f_i_parent":
 				{

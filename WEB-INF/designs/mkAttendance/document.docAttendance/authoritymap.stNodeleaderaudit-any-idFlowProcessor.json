@@ -1,0 +1,21 @@
+{
+	"f_state":"stNodeleaderaudit",
+	"f_authorities":
+	{
+		"mkAttendance.docAttendance.btnSave":"0010",
+		"mkAttendance.docAttendance.btnConfirm":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_DEPT_OPINION":"0010",
+		"mkAttendance.T_MK_APP_ATTENDANCE.F_MANAGER_OPINION":"0010"
+	},
+	"f_identity":"idFlowProcessor",
+	"f_substate":"any",
+	"f_name":"stNodeleaderaudit-any-idFlowProcessor",
+	"f_caption":"stNodeleaderaudit-any-idFlowProcessor",
+	"f_key":"stNodeleaderaudit-any-idFlowProcessor",
+	"f_class":"authoritymap",
+	"f_i_parent":
+	{
+		"classpath":"document",
+		"data":"mkAttendance.docAttendance"
+	}
+}
