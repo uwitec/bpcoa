@@ -109,9 +109,6 @@
 				}
 			},
 			{
-				"f_icon":"icon-sys-explorer",
-				"f_formenu":true,
-				"f_default":false,
 				"f_items":
 				{
 					"classpath":"modulemenu",
@@ -183,6 +180,9 @@
 						}
 					]
 				},
+				"f_icon":"icon-sys-explorer",
+				"f_formenu":true,
+				"f_default":false,
 				"f_order":1,
 				"f_forshortcut":false,
 				"f_name":"menuMyScoreHistory",
@@ -196,9 +196,6 @@
 				}
 			},
 			{
-				"f_icon":"icon-app-mkoa-rule",
-				"f_formenu":true,
-				"f_default":false,
 				"f_items":
 				{
 					"classpath":"modulemenu",
@@ -265,9 +262,52 @@
 								"classpath":"modulemenu",
 								"data":"mkScore.menuUserScoreManager"
 							}
+						},
+						{
+							"f_formenu":true,
+							"f_default":false,
+							"f_i_view":
+							{
+								"classpath":"view",
+								"data":"mkScore.qDailyScore.vscoreDay"
+							},
+							"f_order":4,
+							"f_forshortcut":false,
+							"f_name":"menuDayScore",
+							"f_caption":"日积分统计",
+							"f_key":"menuDayScore",
+							"f_class":"modulemenu",
+							"f_i_parent":
+							{
+								"classpath":"modulemenu",
+								"data":"mkScore.menuUserScoreManager"
+							}
+						},
+						{
+							"f_formenu":true,
+							"f_default":false,
+							"f_i_view":
+							{
+								"classpath":"view",
+								"data":"mkScore.qScoreMonth.vScoreMonth2"
+							},
+							"f_order":5,
+							"f_forshortcut":false,
+							"f_name":"menuMonthScore2",
+							"f_caption":"月积分统计2",
+							"f_key":"menuMonthScore2",
+							"f_class":"modulemenu",
+							"f_i_parent":
+							{
+								"classpath":"modulemenu",
+								"data":"mkScore.menuUserScoreManager"
+							}
 						}
 					]
 				},
+				"f_icon":"icon-app-mkoa-rule",
+				"f_formenu":true,
+				"f_default":false,
 				"f_order":4,
 				"f_forshortcut":false,
 				"f_name":"menuUserScoreManager",

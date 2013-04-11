@@ -131,6 +131,30 @@
 					"classpath":"query",
 					"data":"mkScore.qScoreMonth"
 				}
+			},
+			{
+				"f_icon":"icon-sys-explorer",
+				"f_url":"app/bpc/score/score.month2",
+				"f_keycolumn":"ID",
+				"f_single_select":false,
+				"f_page_size":0,
+				"f_isquery":false,
+				"f_issummary":false,
+				"f_autoexpandcolumn":"F_DEPT_WEIGHT",
+				"f_enable_favorite":false,
+				"f_name":"vScoreMonth2",
+				"f_caption":"月积分统计2",
+				"f_key":"vScoreMonth2",
+				"f_config":
+				{
+					"editorform":"mkScore.T_MK_BPC_SCORE_MONTH.frmScoreMonth"
+				},
+				"f_class":"view",
+				"f_i_parent":
+				{
+					"classpath":"query",
+					"data":"mkScore.qScoreMonth"
+				}
 			}
 		]
 	},
