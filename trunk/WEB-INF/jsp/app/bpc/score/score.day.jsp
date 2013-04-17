@@ -381,14 +381,14 @@ Ext.onReady(function(){
 	Ext.apply(worklogPanel.autoLoad.params, 
 			{panelid : worklogPanel.getId(),  date : store.baseParams.day});
 	// 列表行选中
-	/* grid.on('rowclick', function(){
+	grid.on('rowclick', function(){
 		var record = grid.getSelectionModel().getSelected();
 		if (record){
 			param_userid = record.get('F_USER_ID');
 			param_username = record.get('F_USER_NAME');
 			worklogPanel.refresh({userid: param_userid, username: param_username, date: store.baseParams.day});
 		}
-	}); */
+	}); 
 
 	// 刷新
 	panel.refresh = function(){
